@@ -38,7 +38,7 @@ public class JavaIntroEj07 {
         System.out.println("3 - Bomba de hormigón");
         System.out.println("4 - Bomba de pasta alimenticia");
         int tipoMotor = leer.nextInt();
-        if(tipoMotor>4 && tipoMotor<1){
+        if(tipoMotor>4 || tipoMotor<1){
             System.out.println("No existe un valor válidoo para tipo de bomba");
         }else if(tipoMotor<=4&&tipoMotor>=1){
             switch (tipoMotor){
