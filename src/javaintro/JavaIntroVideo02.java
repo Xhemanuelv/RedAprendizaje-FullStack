@@ -17,7 +17,7 @@ public class JavaIntroVideo02 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Codigo
         int opinion;
         Scanner leer = new Scanner(System.in);
         System.out.println("Clasifique la pelicula de 1 a 5 estrellas");

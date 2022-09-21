@@ -23,9 +23,8 @@ public class JavaIntroEj05 {
         
         boolean flag = leer.nextBoolean();
         double number = leer.nextDouble();
-        char letter = 'J';
-        
-    
+        String auxword = leer.nextLine();
+        char firstChar = auxword.charAt(0);
     }
     
 }
