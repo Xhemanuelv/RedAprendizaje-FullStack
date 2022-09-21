@@ -28,7 +28,7 @@ public class JavaIntroVideo05Funciones {
     }
     
     public static int suma(int a, int b){
-        //logica
+        //logica del programa
         int resultado = a + b;
         return resultado;
     }
