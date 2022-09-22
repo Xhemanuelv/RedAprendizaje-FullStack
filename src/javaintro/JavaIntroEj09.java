@@ -33,6 +33,5 @@ public class JavaIntroEj09 {
              }
         }
         System.out.println("La sumatoria de los numeros introducidos es:"+auxiliar);
-    }
-    
+    } 
 }
