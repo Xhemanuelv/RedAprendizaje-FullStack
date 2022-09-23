@@ -27,12 +27,13 @@ public class JavaIntroEj11 {
         String textoCodificado = "";
         Scanner leer = new Scanner(System.in);
         textoUsuario = leer.nextLine();
-//        char[] arrayChars = textoUsuario.toCharArray();
-        for (int i = 0; i < textoUsuario.length(); i++) {
+        char[] textoUsuarioArray = textoUsuario.toCharArray();
+        for (int i = 0; i < textoUsuarioArray.length; i++) {
             char enigma;
-            enigma = codificarSecuencia(textoUsuario.charAt(i));
-//            textoCodificado.concat();
-            textoCodificado = textoUsuario.replace(textoUsuario.charAt(i), enigma);
+            //enigma = codificarSecuencia(textoUsuario.charAt(i));
+            //textoCodificado.concat();
+            //textoCodificado = textoUsuario.replace(textoUsuario.charAt(i), enigma);
+
         }
         System.out.println(textoCodificado);
     }
