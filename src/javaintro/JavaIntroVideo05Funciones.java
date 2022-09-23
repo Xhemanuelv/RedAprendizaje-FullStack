@@ -18,21 +18,22 @@ public class JavaIntroVideo05Funciones {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        int resultado = suma(10,10);
+
+        int resultado = suma(10, 10);
         System.out.println(resultado);
         System.out.println("Ingrese su nombre");
-        Scanner leer= new Scanner(System.in);
-        String name=leer.nextLine();
+        Scanner leer = new Scanner(System.in);
+        String name = leer.nextLine();
         saludoPersonalizado(name);
     }
-    
-    public static int suma(int a, int b){
+
+    public static int suma(int a, int b) {
         //logica del programa
         int resultado = a + b;
         return resultado;
     }
-    public static void saludoPersonalizado(String nombre){
-        System.out.println("Hola "+ nombre +" ¿Como estas hoy?");
+
+    public static void saludoPersonalizado(String nombre) {
+        System.out.println("Hola " + nombre + " ¿Como estas hoy?");
     }
 }
