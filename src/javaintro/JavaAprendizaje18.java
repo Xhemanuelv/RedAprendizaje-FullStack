@@ -20,7 +20,7 @@ public class JavaAprendizaje18 {
         /*Realizar un programa que rellene un matriz de 4 x 4 de valores aleatorios y muestre la
 traspuesta de la matriz. La matriz traspuesta de una matriz A se denota por B y se obtiene
 cambiando sus filas por columnas (o viceversa).*/
-        int filas = 4, columnas = 4;
+        int filas = 4, columnas = 4;//reemplazar por lectura en otro caso
         int[][] matrix = devolverMatriz(filas, columnas);
         System.out.println();
         int[][] transpuesta =transponerMatriz(matrix,filas,columnas);
