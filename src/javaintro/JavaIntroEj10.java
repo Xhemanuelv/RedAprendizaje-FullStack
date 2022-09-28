@@ -49,7 +49,7 @@ public class JavaIntroEj10 {
                 dibujar = leer.nextInt();
                 for (int j = 1; j <= dibujar; j++) {
                     if (j == 1) {
-                        System.out.print(dibujar);
+                        System.out.print(dibujar+" ");//muestra el numero + espacio
                     }
                     System.out.print("*");
                 }
