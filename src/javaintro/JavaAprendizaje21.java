@@ -23,8 +23,8 @@ public class JavaAprendizaje21 {
         boolean contenido = contieneSubmatriz(matrix, 10, subMatrix, 3);
         if (contenido) {
             System.out.println("La matriz se encuentra contenida en esas posiciones");
-            
-        }else { 
+
+        } else {
             System.out.println("La matriz[3][3] no se encuentra contenida en la matriz[10][10]");
         }
     }
@@ -40,7 +40,7 @@ public class JavaAprendizaje21 {
 
         }
         //mostrar matriz [n][m]
-        System.out.println("Matriz["+filas+"]["+columnas+"] :");
+        System.out.println("Matriz[" + filas + "][" + columnas + "] :");
         System.out.println();
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
@@ -56,7 +56,7 @@ public class JavaAprendizaje21 {
     public static boolean contieneSubmatriz(int[][] matriz, int tamano, int[][] subMatriz, int tamanoSub) {
         //numero posible de matrices de 3x3 contenidas en una matriz de 10x10 64 recorro diagonales, si coincide  con submatriz se analiza filas
         boolean flag = false, contained;
-        int counter = 0, cordinateX = 0, cordinateY = 0;
+        int counter = 0, cordinateX = 0, cordinateY = 0, recursiveJ, recursiveI;
         int[][] auxMatrix = new int[3][3];
         //Obtengo coordenadas si existen coincidencias en el primer elemento de  submatriz{3}{3} de m[10][10] y altM[3][3] 
         for (int i = 0; i < 8; i++) {
@@ -78,10 +78,11 @@ public class JavaAprendizaje21 {
                 if (counter == 3) {
                     flag = true;
                     //si se encuentra una diagonal similar se aborta el chequeo del resto de las matrices de 3x3 dentro de la matriz 10x10
+                    //volver recursiva la funcion y chequear si se encuentra en mas de una posicion?
+                    //requiere cambiar el inicio de recorrido en linea 62 y 63 i & j
                     break;
                 }
             }
-
         }
         if (flag) {
             for (int i = cordinateX; i < tamanoSub; i++) {
