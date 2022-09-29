@@ -30,9 +30,9 @@ public class JavaIntroEj11 {
         char[] textoUsuarioArray = textoUsuario.toCharArray();
         for (int i = 0; i < textoUsuarioArray.length; i++) {
             char enigma;
-            //enigma = codificarSecuencia(textoUsuario.charAt(i));
-            //textoCodificado.concat();
-            //textoCodificado = textoUsuario.replace(textoUsuario.charAt(i), enigma);
+            enigma = codificarSecuencia(textoUsuario.charAt(i));
+//            textoCodificado.concat();
+            textoCodificado = textoUsuario.replace(textoUsuario.charAt(i), enigma);
 
         }
         System.out.println(textoCodificado);

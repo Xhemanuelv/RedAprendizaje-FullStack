@@ -18,19 +18,19 @@ public class JavaIntroEj08 {
      */
     public static void main(String[] args) {
         // Validar nota entre 0 y 10, repetir hasta estar dentro de los parametros
-    Scanner leer = new Scanner(System.in);
-    int nota;
+        Scanner leer = new Scanner(System.in);
+        int nota;
         System.out.println("Ingrese una nota");
         nota = leer.nextInt();
-        if(nota>10||nota<0){
-            do{
+        if (nota > 10 || nota < 0) {
+            do {
                 System.out.println("Nota Invalida, ingrese una nota entre 0 y 10");
-                nota=leer.nextInt();
-            }while(nota>10|| nota<0);
-        }else if(nota<=10||nota>=0) {
+                nota = leer.nextInt();
+            } while (nota > 10 || nota < 0);
+        } else if (nota <= 10 || nota >= 0) {
             System.out.println("La nota es valida");
         }
-        if(nota<=10||nota>=0) {
+        if (nota <= 10 || nota >= 0) {
             System.out.println("La nota es valida");
         }
     }

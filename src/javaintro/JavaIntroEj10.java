@@ -19,7 +19,7 @@ public class JavaIntroEj10 {
     public static void main(String[] args) {
         // Introducir 4 numeros e imprimir tantos asteriscos como indique su valor
         Scanner leer = new Scanner(System.in);
-        for (int i = 1; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             if (i > 1) {
                 System.out.format("%nIngrese " + i + "° numero%n");
             } else {
@@ -49,7 +49,7 @@ public class JavaIntroEj10 {
                 dibujar = leer.nextInt();
                 for (int j = 1; j <= dibujar; j++) {
                     if (j == 1) {
-                        System.out.print(dibujar+" ");//muestra el numero + espacio
+                        System.out.print(dibujar + " ");//muestra el numero + espacio
                     }
                     System.out.print("*");
                 }

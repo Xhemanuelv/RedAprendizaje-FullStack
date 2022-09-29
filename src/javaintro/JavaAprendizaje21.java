@@ -18,8 +18,22 @@ public class JavaAprendizaje21 {
         /*verificar si una matriz nxn  contiene una matriz mxm y m<n
         https://www.geeksforgeeks.org/check-if-a-matrix-contains-a-square-submatrix-with-0-as-boundary-element/
          */
-        int[][] matrix = devolverMatriz(10, 10);
-        int[][] subMatrix = devolverMatriz(3, 3);
+//        int[][] matrix = devolverMatriz(10, 10);
+//        int[][] subMatrix = devolverMatriz(3, 3);
+        int[][] matrix = {{1, 26, 36, 47, 5, 6, 72, 81, 95, 10}, 
+                          {11, 12, 13, 21, 41, 22, 67, 20, 10, 61}, 
+                          {56, 78, 87, 90, 9, 90, 17, 12, 87, 67}, 
+                          {41, 87, 24, 56, 97, 74, 87, 42, 64, 35}, 
+                          {32, 76, 79, 1, 36, 5, 67, 96, 12, 11}, 
+                          {99, 13, 54, 88, 89, 90, 75, 12, 41, 76}, 
+                          {67, 78, 87, 45, 14, 22, 26, 42, 56, 78}, 
+                          {98, 45, 34, 23, 32, 56, 74, 16, 19, 18}, 
+                          {24, 67, 97, 46, 87, 13, 67, 89, 93, 24}, 
+                          {21, 68, 78, 98, 90, 67, 12, 41, 65, 12}};
+        int[][] subMatrix = {
+            {36, 5, 67}, 
+            {89, 90, 75}, 
+            {14, 22, 26}};
         boolean contenido = contieneSubmatriz(matrix, 10, subMatrix, 3);
         if (contenido) {
             System.out.println("La matriz se encuentra contenida en esas posiciones");
@@ -91,6 +105,11 @@ public class JavaAprendizaje21 {
                     auxMatrix[i][j]=matriz[i][j];
                 }*/
                 System.arraycopy(matriz[i], cordinateY, auxMatrix[i], cordinateY, tamanoSub - cordinateY);
+                for (int j = 0; j < 10; j++) {
+                    for (int k = 0; k < 10; k++) {
+                        System.out.println("");
+                    }
+                }
             }
         }
         return contained = auxMatrix == subMatriz;
