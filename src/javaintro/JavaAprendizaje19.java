@@ -109,6 +109,7 @@ public class JavaAprendizaje19 {
         }
         return true;
     }
+    
     //comparar elementos de transpuesta con elementos negativos de matriz 
 
     public static boolean antisymmetry(int[][] transpuesta, int[][] matriz, int tamano) {
