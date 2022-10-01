@@ -16,24 +16,27 @@ public class JavaIntroEj11 {
     /**
      * @param args the command line arguments
      */
+    /*      a e i o u
+            @ # $ % *
+     */
     public static void main(String[] args) {
-        /*Escribir un programa que procese una secuencia de caracteres ingresada por teclado y terminada
-    en punto, y luego codifique la palabra o frase ingresada de la siguiente manera: cada vocal se
-    reemplaza por el carácter que se indica en la tabla y el resto de los caracteres (incluyendo a las
-    vocales acentuadas) se mantienen sin cambios.
-        Realice un subprograma que reciba una secuencia de caracteres y retorne la codificación
-    correspondiente. Utilice la estructura “según” para la transformación.*/
-        String textoUsuario;
         String textoCodificado = "";
         Scanner leer = new Scanner(System.in);
-        textoUsuario = leer.nextLine();
-        char[] textoUsuarioArray = textoUsuario.toCharArray();
-        for (int i = 0; i < textoUsuarioArray.length; i++) {
-            char enigma;
-            enigma = codificarSecuencia(textoUsuario.charAt(i));
-//            textoCodificado.concat();
-            textoCodificado = textoUsuario.replace(textoUsuario.charAt(i), enigma);
+        System.out.println("Ingrese la frase: ");
+        String textoUsuario = leer.nextLine();
 
+        while (textoUsuario.charAt(textoUsuario.length() - 1) != '.') {
+            System.out.println("La frase debe terminar en punto");
+            textoUsuario = leer.nextLine();
+        }
+        char[] textoUsuarioArray = textoUsuario.toCharArray();
+        char enigma;
+        for (int i = 0; i < textoUsuarioArray.length; i++) {
+            enigma = codificarSecuencia(textoUsuarioArray[i]);
+            textoCodificado += enigma;
+//            if (i + 1 == textoUsuarioArray.length) {
+//                textoCodificado += ".";
+//            }
         }
         System.out.println(textoCodificado);
     }
