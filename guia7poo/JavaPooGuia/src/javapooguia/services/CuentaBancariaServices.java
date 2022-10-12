@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javapooguia.services;
 
 import java.util.Scanner;
@@ -14,9 +9,9 @@ import javapooguia.entities.CuentaBancaria;
  * @author Xhemanuelv
  */
 public class CuentaBancariaServices {
-    
+
     Scanner leer = new Scanner(System.in);
-    
+
     public CuentaBancaria crearCuenta() {
         System.out.println("Registrando nuevo usuario");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -36,14 +31,14 @@ public class CuentaBancariaServices {
         System.out.println("La tasa de interes actual es de " + interestRate);
         return new CuentaBancaria(name, id, accountnumber, saldoInicial, interestRate);
     }
-    
+
     public void depositoCuenta(CuentaBancaria cliente) {
         System.out.println("Deposite el dinero");
         double deposit = leer.nextDouble();
         cliente.setSaldo((float) (cliente.getSaldo() + deposit));
         System.out.println("Su nuevo saldo es : $" + cliente.getSaldo());
     }
-    
+
     public void retiroCuenta(CuentaBancaria cliente) {
         System.out.println("Que cantidad desea extraer de su cuenta");
         double retiro = leer.nextDouble();
@@ -62,7 +57,7 @@ public class CuentaBancariaServices {
             System.out.println("Saldo disponible : $" + cliente.getSaldo());
         }
     }
-    
+
     public void extraccionRapidaCuenta(CuentaBancaria cliente) {
         double retiro;
         do {
@@ -74,22 +69,22 @@ public class CuentaBancariaServices {
             }
         } while (retiro > (cliente.getSaldo() * 0.2));
         cliente.setSaldo((float) (cliente.getSaldo() - retiro));
-        
+
     }
-    
+
     public void consultaSaldo(CuentaBancaria cliente) {
         System.out.println("Saldo disponible en su cuenta :");
-        System.out.println("$"+cliente.getSaldo());
+        System.out.println("$" + cliente.getSaldo());
     }
-    
-    public void consultarDatos(CuentaBancaria cliente){
+
+    public void consultarDatos(CuentaBancaria cliente) {
         System.out.println("Datos del cliente");
-        System.out.println("Nombre : "+cliente.getNombreCliente());
-        System.out.println("DNI : "+cliente.getClientDNI());
-        System.out.println("N° de cuenta : "+cliente.getNumeroCuenta());
-        System.out.println("Saldo disponible : $"+cliente.getSaldo());
-        System.out.println("Tasa interes : "+cliente.getInteres()+"%");
-        
+        System.out.println("Nombre : " + cliente.getNombreCliente());
+        System.out.println("DNI : " + cliente.getClientDNI());
+        System.out.println("N° de cuenta : " + cliente.getNumeroCuenta());
+        System.out.println("Saldo disponible : $" + cliente.getSaldo());
+        System.out.println("Tasa interes : " + cliente.getInteres() + "%");
+
     }
-    
+
 }
