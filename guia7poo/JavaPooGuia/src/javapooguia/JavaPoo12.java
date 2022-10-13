@@ -1,9 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javapooguia;
+
+import java.util.Scanner;
+import javapooguia.entities.Persona12;
+import javapooguia.services.Persona12Services;
 
 /**
  *
@@ -11,11 +10,22 @@ package javapooguia;
  */
 public class JavaPoo12 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // persona ejercicio 12
+        
+        Scanner leer = new Scanner(System.in);
+        Persona12Services p12s = new Persona12Services();
+        Persona12 guybrush = p12s.crearPersona();
+        System.out.println(guybrush);
+        int edadPersona12 = p12s.calcularEdad(guybrush);
+        System.out.println("Introducir edad de otra persona para analizar si es menor a la ingresada anteriormente");
+        int edad = leer.nextInt();
+        boolean menorQue = p12s.menorQue(edad, edadPersona12);
+        if (menorQue) {
+            System.out.println("La nueva persona es menor");
+        } else {
+            System.out.println("La nueva persona es mayor");
+        }
     }
-    
+
 }

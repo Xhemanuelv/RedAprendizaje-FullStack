@@ -11,7 +11,7 @@ import javapooguia.services.CafeteraServices;
 public class JavaPoo06 {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        // cafetera
         Scanner leer = new Scanner(System.in);
 
         CafeteraServices cafeserv = new CafeteraServices();
