@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javapooguia.entities;
 
 /**
@@ -37,5 +32,12 @@ public class Cadena {
     public void setLongitudFrase(int longitudFrase) {
         this.longitudFrase = longitudFrase;
     }
+
+    @Override
+    public String toString() {
+        return "Cadena{" + "frase=" + frase + ", longitudFrase=" + longitudFrase + '}';
+    }
+    
+    
 
 }
