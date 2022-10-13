@@ -12,7 +12,7 @@ public class ServicioAhorcado {
     private Ahorcado crearJuego() {
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese la palabra que se buscara");
-        String separar = leer.next();
+        String separar = leer.next().toLowerCase();
         System.out.println("Especifique la cantidad de intentos");
         int tries = leer.nextInt();
         char[] ch = new char[separar.length()];
@@ -59,14 +59,15 @@ public class ServicioAhorcado {
 
         return contador > 0;
     }
-    //esto anda MAL no pone bien la cantidad de intentos hay que arreglarlo
-    private void intentos(Ahorcado palabra, char letra, int rondas) {
+
+    
+    private void intentos(Ahorcado palabra, char letra) {
 
         if (!(encontradas(palabra, letra))) {
-            System.out.println("Intentos restantes: " + (palabra.getIntentos() - rondas));
-            palabra.setIntentos((palabra.getIntentos()-1));
-        }else   {
-            System.out.println("Intentos restantes: " +palabra.getIntentos());
+            System.out.println("Intentos restantes: " + (palabra.getIntentos() - 1));
+            palabra.setIntentos((palabra.getIntentos() - 1));
+        } else {
+            System.out.println("Intentos restantes: " + palabra.getIntentos());
         }
 
     }
@@ -77,17 +78,21 @@ public class ServicioAhorcado {
         System.out.println("Que comience el juego");
         char letra;
         int ausiliar = juguemos.getIntentos();
+        //el juego no se termina cuando se descubren todas las letras
+        //sigue hasta agotar los intentos
         for (int i = 0; i < ausiliar; i++) {
 
             System.out.println("Ingrese una letra");
-            letra = leer.next().charAt(0);
+            letra = leer.next().toLowerCase().charAt(0);
             longitud(juguemos);
             buscar(juguemos, letra);
             encontradas(juguemos, letra);
             juguemos.getEncontradas();
-            intentos(juguemos, letra, i);
+            intentos(juguemos, letra);
+            System.out.println(juguemos.getEncontradas());
         }
-        System.out.println(juguemos);
-
+        System.out.print("La palabra era: ");
+        System.out.print(juguemos.getPalabra());
+        System.out.println();
     }
 }
