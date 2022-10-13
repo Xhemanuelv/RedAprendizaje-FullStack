@@ -11,7 +11,7 @@ import javapooguia.services.Persona12Services;
 public class JavaPoo12 {
 
     public static void main(String[] args) {
-        // persona ejercicio 12
+        // persona ejercicio 12 edit
         
         Scanner leer = new Scanner(System.in);
         Persona12Services p12s = new Persona12Services();
