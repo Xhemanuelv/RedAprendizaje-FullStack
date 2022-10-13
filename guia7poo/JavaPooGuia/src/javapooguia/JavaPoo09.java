@@ -1,7 +1,7 @@
 package javapooguia;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import javapooguia.entities.Matematica;
+import javapooguia.services.MatematicaServices;
 
 /**
  *
@@ -9,35 +9,19 @@ import java.util.Collections;
  */
 public class JavaPoo09 {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-
-        ArrayList<Double> a = new ArrayList<>();
-        ArrayList<Double> b = new ArrayList<>();
-
-        for (int i = 0; i < 50; i++) {
-            a.add(Math.random() * 10);
-
-            //System.out.println((i + 1) + "" + a.get(i));
-        }
-
-        System.out.println("Arreglo A");
-        for (int i = 0; i < 50; i++) {
-            System.out.println((i + 1) + "" + a.get(i));
-        }
-
-        //ordenar Arraylist
-        
-        
-        Collections.sort(a);
-
-        System.out.println("Arreglo A");
-        for (int i = 0; i < 50; i++) {
-            System.out.println((i + 1) + "" + a.get(i));
-        }
-
-        for (int i = 0; i < 10; i++) {
-
-        }
+        //matematicas
+        double rnd1=Math.random() * 10+1,rnd2=Math.random() * 10+1;
+        Matematica data=new Matematica(rnd1,rnd2);
+        MatematicaServices matServ=new MatematicaServices();
+        System.out.println(data);
+        System.out.println("El mayor de los numeros es: "+ matServ.devolverMayor(data));
+        matServ.calcularPotencia(data);
+        matServ.calculaRaiz(data);
+    
     }
 
 }
