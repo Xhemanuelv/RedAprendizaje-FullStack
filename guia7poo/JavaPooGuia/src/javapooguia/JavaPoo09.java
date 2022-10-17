@@ -9,9 +9,6 @@ import javapooguia.services.MatematicaServices;
  */
 public class JavaPoo09 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         //matematicas
         double rnd1=Math.random() * 10+1,rnd2=Math.random() * 10+1;
