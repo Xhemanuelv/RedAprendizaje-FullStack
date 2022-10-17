@@ -10,7 +10,7 @@ import javapooguia.entities.Rectangulo;
 public class RectanguloServices {
 
     public Rectangulo crearRectangulo() {
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in)/*.useDelimiter("\n")*/;
         System.out.println("Creando un nuevo rectangulo");
         System.out.println("Ingrese la base del rectangulo");
         int b, h;

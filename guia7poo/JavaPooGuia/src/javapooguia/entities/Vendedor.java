@@ -61,6 +61,7 @@ public class Vendedor {
     }
 
     //getter & setter
+
     public String getNombre() {
         return nombre;
     }
@@ -81,7 +82,7 @@ public class Vendedor {
         return sueldoBasico;
     }
 
-    public void setSueldoBasico(Double sueldoBasico) {
+    public void setSueldoBasico(double sueldoBasico) {
         this.sueldoBasico = sueldoBasico;
     }
 
@@ -89,7 +90,7 @@ public class Vendedor {
         return comisiones;
     }
 
-    public void setComisiones(Double comisiones) {
+    public void setComisiones(double comisiones) {
         this.comisiones = comisiones;
     }
 
@@ -97,7 +98,7 @@ public class Vendedor {
         return sueldoMensual;
     }
 
-    public void setSueldoMensual(Double sueldoMensual) {
+    public void setSueldoMensual(double sueldoMensual) {
         this.sueldoMensual = sueldoMensual;
     }
 
@@ -108,6 +109,7 @@ public class Vendedor {
     public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
+    
 
     @Override
     public String toString() {

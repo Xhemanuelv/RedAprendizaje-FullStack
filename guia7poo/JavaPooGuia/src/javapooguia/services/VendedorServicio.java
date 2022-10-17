@@ -12,9 +12,26 @@ public class VendedorServicio {
 
     Scanner leer = new Scanner(System.in);
 
-    public Vendedor altaVendedor() {
-
-        //fill attributes
+//    public Vendedor altaVendedor() {
+//
+//        //fill attributes
+//        System.out.println("Ingrese el nombre del vendedor");
+//        String name = leer.next();
+//        System.out.println("Ingrese el DNI del vendedor");
+//        int id = leer.nextInt();
+//        System.out.println("Ingrese el sueldo basico del vendedor");
+//        double basicSalary = leer.nextDouble();
+//        System.out.println("Ingrese el dia que comenzo a trabajar");
+//        int dia = leer.nextInt();
+//        System.out.println("Ingrese el mes en que comenzo a trabajar");
+//        int mes = leer.nextInt();
+//        System.out.println("Ingrese el año en que comenzo a trabajar");
+//        int anio = leer.nextInt();
+//        Date fecha = new Date(anio - 1900, mes - 1, dia);
+//        //create new object type Vendedor
+//        return new Vendedor(name, id, basicSalary, fecha);
+//    }
+    public void altaVendedor(Vendedor v1){
         System.out.println("Ingrese el nombre del vendedor");
         String name = leer.next();
         System.out.println("Ingrese el DNI del vendedor");
@@ -28,8 +45,10 @@ public class VendedorServicio {
         System.out.println("Ingrese el año en que comenzo a trabajar");
         int anio = leer.nextInt();
         Date fecha = new Date(anio - 1900, mes - 1, dia);
-        //create new object type Vendedor
-        return new Vendedor(name, id, basicSalary, fecha);
+        v1.setNombre(name);
+        v1.setDni(id);
+        v1.setSueldoBasico(basicSalary);
+        v1.setFechaInicio(fecha);
     }
 
     public void SueldoMensual(Vendedor employee) {
@@ -55,5 +74,6 @@ public class VendedorServicio {
         } else if (antiguedad < 1) {
             System.out.println("El empleado tiene vacaciones proporcionales");
         }
+//        System.out.println(hoy);
     }
 }
