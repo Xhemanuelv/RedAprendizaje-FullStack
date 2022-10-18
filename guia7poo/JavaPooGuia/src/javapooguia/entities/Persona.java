@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package javapooguia.entities;
 
 import java.util.Date;
@@ -29,6 +25,16 @@ public class Persona {
     public Persona() {
     }
 
+    public Persona(String nombre, int edad, String sexo, float peso, float altura) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    
+    
     public Persona(String nombre, int edad, String sexo, Date fechaNacimiento, float peso, float altura) {
         this.nombre = nombre;
         this.edad = edad;
@@ -113,9 +119,16 @@ public class Persona {
         this.indiceMasaCorporal = indiceMasaCorporal;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", fechaNacimiento=" + fechaNacimiento + ", peso=" + peso + ", altura=" + altura + ", mayorEdad=" + mayorEdad + ", indiceMasaCorporal=" + indiceMasaCorporal + '}';
+//    }
+
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", fechaNacimiento=" + fechaNacimiento + ", peso=" + peso + ", altura=" + altura + ", mayorEdad=" + mayorEdad + ", indiceMasaCorporal=" + indiceMasaCorporal + '}';
+        return nombre;
     }
+    
+    
 
 }

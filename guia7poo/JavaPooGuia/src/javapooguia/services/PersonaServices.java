@@ -64,7 +64,7 @@ public class PersonaServices {
         return new Persona(name, age, gender, birthday, weight, height);
     }
 
-    public void calcularIMC(Persona joenneDoe) {
+    public double calcularIMC(Persona joenneDoe) {
         /**
          * peso ideal (peso en kg/(altura^2 en mt2)). imc < 20= -1 underweight
          * imc ~ 20 a 25 inclusive 0 ideal
@@ -79,6 +79,7 @@ public class PersonaServices {
         } else if (imc > 25) {
             joenneDoe.setIndiceMasaCorporal(1);
         }
+        return imc;
     }
 
     public boolean mayoriaEdad(Persona joeDoe) {
