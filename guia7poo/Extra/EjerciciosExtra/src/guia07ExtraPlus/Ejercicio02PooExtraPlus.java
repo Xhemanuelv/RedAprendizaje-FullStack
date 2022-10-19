@@ -1,10 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package guia07ExtraPlus;
+
+import guia07ExtraPlus.entities.Tiempo;
+import guia07ExtraPlus.services.TiempoServices;
 
 /**
  *
@@ -12,11 +10,13 @@ package guia07ExtraPlus;
  */
 public class Ejercicio02PooExtraPlus {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Tiempo
+        TiempoServices tiempoServ=new TiempoServices();
+        Tiempo horaActual=tiempoServ.ingresarHora();
+        tiempoServ.imprimirHoraCompleta(horaActual);
+        
     }
 
 }
