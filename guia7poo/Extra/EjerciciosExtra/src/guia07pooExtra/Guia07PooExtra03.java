@@ -15,7 +15,7 @@ import guia07pooExtra.servicios.RaicesServicios;
 public class Guia07PooExtra03 {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Raices
 
         RaicesServicios rs = new RaicesServicios();
         Raices ecuacion2doGrado = rs.llenarParametros();

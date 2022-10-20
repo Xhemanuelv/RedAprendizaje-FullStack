@@ -10,7 +10,8 @@ public class Adivinames {
 
     public String[] mesesAnio = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
     public String mesSecreto = mesesAnio[(int) (Math.random() * 12 + 1)];
-
+//    public String mesSecreto = mesesAnio[3];
+    
     public Adivinames() {
     }
 

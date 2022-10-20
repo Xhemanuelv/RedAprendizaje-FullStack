@@ -25,6 +25,7 @@ public class RaicesServicios {
         double martabruce;
         martabruce = (Math.pow(marta.getB(), 2)) - (4 * (marta.getA() * (marta.getC())));
         marta.setDiscriminante(martabruce);
+        System.out.println("El discriminante es : "+martabruce);
         return martabruce;
     }
 
@@ -39,9 +40,9 @@ public class RaicesServicios {
     public void obtenerRaices(Raices ramas) {
         if (tieneRaices(ramas)) {
             System.out.println("La solucion 1° es:");
-            System.out.println("(-b±√((b^2)-(4*a*c)))/(2*a)= " + ((((-ramas.getB())) + Math.sqrt((Math.pow(ramas.getB(), 2)) - (4 * (ramas.getA() * (ramas.getC()))))) / (2 * ramas.getA())));
+            System.out.println("(-b+√((b^2)-(4*a*c)))/(2*a)= " + ((((-ramas.getB())) + Math.sqrt((Math.pow(ramas.getB(), 2)) - (4 * (ramas.getA() * (ramas.getC()))))) / (2 * ramas.getA())));
             System.out.println("La solucion 2° es:");
-            System.out.println("(-b±√((b^2)-(4*a*c)))/(2*a)= " + ((((-ramas.getB())) - Math.sqrt((Math.pow(ramas.getB(), 2)) - (4 * (ramas.getA() * (ramas.getC()))))) / (2 * ramas.getA())));
+            System.out.println("(-b-√((b^2)-(4*a*c)))/(2*a)= " + ((((-ramas.getB())) - Math.sqrt((Math.pow(ramas.getB(), 2)) - (4 * (ramas.getA() * (ramas.getC()))))) / (2 * ramas.getA())));
         } else {
             System.out.println("No existe solucion");
         }
