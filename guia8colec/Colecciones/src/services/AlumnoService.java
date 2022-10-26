@@ -40,7 +40,7 @@ public class AlumnoService {
         String alumnoBuscado = leer.next();
 
         if (buscarAlumno(alumnoBuscado)) {
-            System.out.printf("\nEl alumno %s tiene una nota final de %.2f \n",alumnoBuscado,promedioAlumno(alumnoBuscado));
+            System.out.printf("\nEl alumno %s tiene una nota final de %.2f \n", alumnoBuscado, promedioAlumno(alumnoBuscado));
             // System.out.println("El alumno " + alumnoBuscado + " tiene una nota final de " +promedioAlumno(alumnoBuscado));
         } else {
             System.out.println("No existe el alumno buscado");
@@ -51,7 +51,7 @@ public class AlumnoService {
         boolean bandera = false;
         for (Alumno aux : curso) {
             bandera = aux.getNameStudent().equalsIgnoreCase(buscarAlumno);
-            System.out.println(bandera);
+
             if (bandera) {
                 break;
             }
@@ -64,9 +64,12 @@ public class AlumnoService {
         for (Alumno auxCurso : curso) {
             if (auxCurso.getNameStudent().equalsIgnoreCase(buscarAlumno)) {
                 nota = auxCurso.getGrades(0) + auxCurso.getGrades(1) + auxCurso.getGrades(2);
+//                for (int i = 0; i < 3; i++) {
+//                    nota+=auxCurso.getGrades(i);
+//                }
             }
         }
-        return (nota/3);
+        return (nota / 3);
     }
 
     public void clearDB() {
