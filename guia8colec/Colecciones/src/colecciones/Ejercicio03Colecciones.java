@@ -9,7 +9,7 @@ import services.AlumnoService;
 public class Ejercicio03Colecciones {
 
     public static void main(String[] args) {
-        // TODO llamar metodos de clase servicio alumno ejercicio 03 colecciones
+        // Promedio de un alumno seleccionado, devuelto solo si existe el alumno en el arraylist
         
         AlumnoService alumnServ=new AlumnoService();
         alumnServ.agregarAlumno();

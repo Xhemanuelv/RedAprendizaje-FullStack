@@ -39,7 +39,7 @@ public class AlumnoService {
         System.out.println("Ingrese el nombre del alumno a calcular promedio");
         String alumnoBuscado = leer.next();
 
-        if (!buscarAlumno(alumnoBuscado)) {
+        if (buscarAlumno(alumnoBuscado)) {
             System.out.printf("\nEl alumno %s tiene una nota final de %.2f \n",alumnoBuscado,promedioAlumno(alumnoBuscado));
             // System.out.println("El alumno " + alumnoBuscado + " tiene una nota final de " +promedioAlumno(alumnoBuscado));
         } else {
@@ -51,6 +51,10 @@ public class AlumnoService {
         boolean bandera = false;
         for (Alumno aux : curso) {
             bandera = aux.getNameStudent().equalsIgnoreCase(buscarAlumno);
+            System.out.println(bandera);
+            if (bandera) {
+                break;
+            }
         }
         return bandera;
     }
