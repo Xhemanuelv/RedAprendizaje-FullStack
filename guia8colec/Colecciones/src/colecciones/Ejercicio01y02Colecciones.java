@@ -29,10 +29,11 @@ public class Ejercicio01y02Colecciones {
         //Ejercicio 2
         System.out.println("Ingrese la raza a retirar");
         String razaQuitar = leer.next();
-
+        //debug entra a else despues de eliminar
         if (perrServ.eliminarRaza(razasPerros, razaQuitar)) {
             System.out.println("Se elimino " + razaQuitar + " de la lista");
-            Collections.sort(razasPerros, ComparadoresPerros.ordenarNombreDescendente);
+
+            Collections.sort(razasPerros, ComparadoresPerros.ordenarNumbreAscendente);
             //muestra las razas ordenadas sin la raza quitada
             perrServ.mostrarRazas(razasPerros);
         } else {

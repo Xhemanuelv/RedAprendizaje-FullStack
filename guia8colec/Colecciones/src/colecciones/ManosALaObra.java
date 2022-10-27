@@ -23,6 +23,15 @@ public class ManosALaObra {
             numerosA.add(x);
         }
         System.out.println("ArrayList");
+        //for mejorado
+        for (Integer aux : numerosA) {
+            System.out.println(aux);
+        }
+        // for i
+        for (int i = 0; i < numerosA.size(); i++) {
+            System.out.println(numerosA.get(i));
+        }
+        //funcional for
         numerosA.forEach((aux) -> {
             System.out.println(aux);
         });
@@ -41,7 +50,6 @@ public class ManosALaObra {
         });
 
         //Mapas
-        
         HashMap<Integer, String> alumnos = new HashMap();
         int dni = 34576981;
         String nombreAlumno = "Pepe";
@@ -60,7 +68,7 @@ public class ManosALaObra {
             Object value = alumnos.get(aux);
             System.out.println(value + " " + key);
         });
-        
+
         //Manos a la obra 2
         numerosA.remove(3);
         System.out.println("ArrayList despues de remover elemento");
@@ -72,7 +80,7 @@ public class ManosALaObra {
         numerosB.forEach((aux) -> {
             System.out.println(aux);
         });
-        alumnos.remove(34576981);//no permite repetidos, pero no puede identificarlos hay q enseñarle a diferenciarlos
+        alumnos.remove(34576981);//no permite repetidos (key), pero no puede identificarlos hay q enseñarle a diferenciarlos
         System.out.println("HashMap despues de remover elemento");
         System.out.println("Alumno y dni");
         alumnos.keySet().forEach((aux) -> {

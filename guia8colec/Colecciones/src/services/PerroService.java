@@ -20,7 +20,7 @@ public class PerroService {
 
     public void mostrarRazas(ArrayList<Perros> razas) {
         razas.forEach((raza) -> {
-            System.out.println(raza);
+            System.out.println(raza.getRazaPerro());
         });
     }
 
@@ -29,7 +29,7 @@ public class PerroService {
         boolean removed=false;
         while (it.hasNext()) {
             Perros next = it.next();
-            if (next.getRazaPerro().equals(razaQuitar)) {
+            if (next.getRazaPerro().equalsIgnoreCase(razaQuitar)) {
                 it.remove();
                 removed=true;
             }else {
