@@ -9,6 +9,9 @@ import java.util.Comparator;
  */
 public class ComparadorPeliculas {
 
+    /**
+     * Ordenar pelicula duracion descendente
+     */
     public static Comparator<Peliculas> ordenarDuracionDescendente = new Comparator<Peliculas>() {
         @Override
         public int compare(Peliculas t, Peliculas t1) {
@@ -16,7 +19,10 @@ public class ComparadorPeliculas {
         }
 
     };
-
+    
+    /**
+     * Ordenar pelicula duracion Ascendente
+     */
     public static Comparator<Peliculas> ordenarDuracionAscendente = new Comparator<Peliculas>() {
         @Override
         public int compare(Peliculas t, Peliculas t1) {
@@ -24,7 +30,10 @@ public class ComparadorPeliculas {
         }
 
     };
-
+    
+    /**
+     * Ordenar pelicula Titulo Alfabetico
+     */
     public static Comparator<Peliculas> ordenarTituloAlfabetico = new Comparator<Peliculas>() {
         @Override
         public int compare(Peliculas t, Peliculas t1) {
@@ -32,7 +41,10 @@ public class ComparadorPeliculas {
         }
 
     };
-
+    
+    /**
+     * Ordenar pelicula Director Alfabetico
+     */
     public static Comparator<Peliculas> ordenarDirectorAlfabetico = new Comparator<Peliculas>() {
         @Override
         public int compare(Peliculas t, Peliculas t1) {

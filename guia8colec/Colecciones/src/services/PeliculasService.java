@@ -23,15 +23,21 @@ public class PeliculasService {
         System.out.println("Ingrese el director de la pelicula");
         String director = leer.next();
         System.out.println("Ingrese la duración de la pelicula en minutos");
-        double minutos=leer.nextInt();
-        float filmLength = (float) (minutos/60);
+        float minutos = leer.nextInt();
+        float filmLength = (minutos / 60);
         return new Peliculas(title, director, filmLength);
     }
 
     public void carteleraCine() {
-        String confirmacion;
+        String confirmacion = "s";
         do {
-            moviesCinema.add(crearPelicula());
+
+            if (confirmacion.equalsIgnoreCase("n") || confirmacion.equalsIgnoreCase("s")) {
+                moviesCinema.add(crearPelicula());
+
+            } else {
+                System.out.println("Ingreso invalido");
+            }
             System.out.println("Agregar otra pelicula S/N");
             confirmacion = leer.next().substring(0);
         } while (!confirmacion.equalsIgnoreCase("n"));
@@ -44,7 +50,8 @@ public class PeliculasService {
     private void mostrarPeliculas() {
         System.out.println("Las peliculas actualmente en cartelera son :");
         moviesCinema.forEach((pelicula) -> {
-             System.out.printf("\n%s - %.1f hora/s ~ Director  %s\n", pelicula.getTitulo(), pelicula.getDuracion(), pelicula.getDirector());
+            System.out.printf("%s - %.1f hora/s ~ Director  %s\n", pelicula.getTitulo(), pelicula.getDuracion(), pelicula.getDirector());
+            System.out.format("");
         });
     }
 
@@ -53,9 +60,22 @@ public class PeliculasService {
      */
     private void mostrarPeliculasHora() {
         System.out.println("Las peliculas de mas de 1 hora actualmente en cartelera son :");
+//        //For i
+//        for (int i = 0; i < moviesCinema.size(); i++) {
+//            if (moviesCinema.get(i).getDuracion() > 1) {
+//                System.out.printf("\n%s - %.1f hora/s ~ Director  %s\n", moviesCinema.get(i).getTitulo(), moviesCinema.get(i).getDuracion(), moviesCinema.get(i).getDirector());
+//            }
+//        }
+//        //for mejorado
+//        for (Peliculas movie : moviesCinema) {
+//            if (movie.getDuracion() > 1) {
+//                System.out.printf("\n%s - %.1f hora/s ~ Director  %s\n", movie.getTitulo(), movie.getDuracion(), movie.getDirector());
+//            }
+//        }
+//        //for mejorado funcional
         moviesCinema.forEach((Peliculas peliculas) -> {
             if (peliculas.getDuracion() > 1) {
-                 System.out.printf("\n%s - %.1f hora/s ~ Director  %s\n", peliculas.getTitulo(), peliculas.getDuracion(), peliculas.getDirector());
+                System.out.printf("\n%s - %.1f hora/s ~ Director  %s\n", peliculas.getTitulo(), peliculas.getDuracion(), peliculas.getDirector());
             }
         });
     }
@@ -66,7 +86,7 @@ public class PeliculasService {
      */
     private void ordenarDuracionMayorMenor() {
         Collections.sort(moviesCinema, ComparadorPeliculas.ordenarDuracionDescendente);
-        System.out.println("Las peliculas y su duracion respectiva son :");
+        System.out.println("Las peliculas y su duracion respectiva son por duracion descendente :");
         mostrarPeliculas();
     }
 
@@ -76,7 +96,7 @@ public class PeliculasService {
      */
     private void ordenarDuracionMenorMayor() {
         Collections.sort(moviesCinema, ComparadorPeliculas.ordenarDuracionAscendente);
-        System.out.println("Las peliculas y su duracion respectiva son :");
+        System.out.println("Las peliculas y su duracion respectiva son por duracion descendente :");
         mostrarPeliculas();
     }
 
@@ -97,6 +117,9 @@ public class PeliculasService {
         mostrarPeliculas();
     }
 
+    /**
+     * Ejecuta los metodos De PeliculaService
+     */
     public void visualizarPeliculas() {
         int salir;
         do {
