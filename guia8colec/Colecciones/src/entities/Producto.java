@@ -1,6 +1,5 @@
 package entities;
 
-import java.util.HashMap;
 import java.util.Objects;
 
 /**
@@ -9,18 +8,13 @@ import java.util.Objects;
  */
 public class Producto {
 
-    //TO DO Remove  the hashmap from the object it will  be called from main or service
     private String product;
-    private Float price;
-    private HashMap<String, Float> productos = new HashMap();
 
     public Producto() {
     }
 
-    public Producto(String product, Float price) {
+    public Producto(String product) {
         this.product = product;
-        this.price = price;
-        this.productos.put(product, price);
     }
 
     public String getProduct() {
@@ -31,24 +25,10 @@ public class Producto {
         this.product = product;
     }
 
-    public Float getPrice() {
-        return price;
-    }
-
-    public void setPrice(Float price) {
-        this.price = price;
-    }
-
-    public HashMap<String, Float> getProductos() {
-        return productos;
-    }
-
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.product);
-        hash = 53 * hash + Objects.hashCode(this.price);
-        hash = 53 * hash + Objects.hashCode(this.productos);
+        hash = 47 * hash + Objects.hashCode(this.product);
         return hash;
     }
 
@@ -67,18 +47,12 @@ public class Producto {
         if (!Objects.equals(this.product, other.product)) {
             return false;
         }
-        if (!Objects.equals(this.price, other.price)) {
-            return false;
-        }
-        if (!Objects.equals(this.productos, other.productos)) {
-            return false;
-        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Producto{" + "product=" + product + ", price=" + price + ", productos=" + productos + '}';
+        return  product;
     }
 
 }
