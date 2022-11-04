@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Relaciones">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="relaciones.agregacion" visibility="public" xPosition="448.0" yPosition="508.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empresa" package="relaciones.agregacion" visibility="public" xPosition="37.0" yPosition="112.0">
+      <Fields>
+        <Field name="clientes" type="List&lt;Cliente&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empleado" package="relaciones.composicion" visibility="public" xPosition="448.0" yPosition="189.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Empresa" package="relaciones.composicion" visibility="public" xPosition="432.0" yPosition="346.0">
+      <Fields>
+        <Field name="empleados" type="List&lt;Empleado&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Auto" package="relaciones.inversa" visibility="public" xPosition="290.0" yPosition="54.0">
+      <Fields>
+        <Field name="propietario" type="Persona" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="relaciones.inversa" visibility="public" xPosition="738.0" yPosition="244.0">
+      <Fields>
+        <Field name="autos" type="List&lt;Auto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Nodo" package="relaciones.reflexiva" visibility="public" xPosition="1192.0" yPosition="272.0">
+      <Fields>
+        <Field name="value" type="String" visibility="private"/>
+        <Field name="next" type="Nodo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Persona" package="relaciones.reflexiva" visibility="public" xPosition="623.0" yPosition="54.0">
+      <Fields>
+        <Field name="amigos" type="List&lt;Persona&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Relaciones" package="relaciones" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="amigos" source="relaciones.reflexiva.Persona" target="relaciones.reflexiva.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Persona&gt;"/>
+    <HasRelation name="clientes" source="relaciones.composicion.Empresa" target="relaciones.agregacion.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="next" source="relaciones.reflexiva.Nodo" target="relaciones.reflexiva.Nodo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="empleados" source="relaciones.composicion.Empresa" target="relaciones.composicion.Empleado" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Empleado&gt;"/>
+    <HasRelation name="propietario" source="relaciones.inversa.Auto" target="relaciones.reflexiva.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autos" source="relaciones.reflexiva.Persona" target="relaciones.inversa.Auto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Auto&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

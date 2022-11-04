@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Colecciones">
+  <ClassDiagramComponents>
+    <Class name="Ejercicio01y02Colecciones" package="colecciones" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio03Colecciones" package="colecciones" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio04Colecciones" package="colecciones" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio05Colecciones" package="colecciones" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio06Colecciones" package="colecciones" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ManosALaObra" package="colecciones" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparadoresPerros" package="colecciones.utlilities" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="ordenarNombreDescendente" type="Comparator&lt;Perros&gt;" visibility="public" isStatic="true"/>
+        <Field name="ordenarNumbreAscendente" type="Comparator&lt;Perros&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ComparadorPais" package="colecciones.utlilities" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="ordenarAlfabeticamente" type="Comparator&lt;Pais&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ComparadorPeliculas" package="colecciones.utlilities" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="ordenarDuracionDescendente" type="Comparator&lt;Peliculas&gt;" visibility="public" isStatic="true"/>
+        <Field name="ordenarDuracionAscendente" type="Comparator&lt;Peliculas&gt;" visibility="public" isStatic="true"/>
+        <Field name="ordenarTituloAlfabetico" type="Comparator&lt;Peliculas&gt;" visibility="public" isStatic="true"/>
+        <Field name="ordenarDirectorAlfabetico" type="Comparator&lt;Peliculas&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ComparadorProductos" package="colecciones.utlilities" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="ordenAlfabeticoProductos" type="Comparator&lt;Producto&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ej04Colecciones" package="ColeccionesExtras" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Extra03Colecciones" package="ColeccionesExtras" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Alumno" package="entities" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="nameStudent" type="String" visibility="private"/>
+        <Field name="grades" type="ArrayList&lt;Integer&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameStudent"/>
+          <Argument type="ArrayList&lt;Integer&gt;" name="grades"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNameStudent" returnType="String" visibility="public"/>
+        <Method name="setNameStudent" returnType="void" visibility="public">
+          <Argument type="String" name="nameStudent"/>
+        </Method>
+        <Method name="getGrades" returnType="Integer" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="setGrades" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Integer&gt;" name="grades"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CantanteFamoso" package="Entities" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="nombreCantante" type="String" visibility="private"/>
+        <Field name="discoMasVendido" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreCantante"/>
+          <Argument type="String" name="discoMasVendido"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCantante" returnType="String" visibility="public"/>
+        <Method name="setNombreCantante" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCantante"/>
+        </Method>
+        <Method name="getDiscoMasVendido" returnType="String" visibility="public"/>
+        <Method name="setDiscoMasVendido" returnType="void" visibility="public">
+          <Argument type="String" name="discoMasVendido"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Libro" package="entities" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="author" type="String" visibility="private"/>
+        <Field name="bookStock" type="int" visibility="private"/>
+        <Field name="bookBorrowed" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="author"/>
+          <Argument type="int" name="bookStock"/>
+          <Argument type="int" name="bookBorrowed"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getAuthor" returnType="String" visibility="public"/>
+        <Method name="setAuthor" returnType="void" visibility="public">
+          <Argument type="String" name="author"/>
+        </Method>
+        <Method name="getBookStock" returnType="int" visibility="public"/>
+        <Method name="setBookStock" returnType="void" visibility="public">
+          <Argument type="int" name="bookStock"/>
+        </Method>
+        <Method name="getBookBorrowed" returnType="int" visibility="public"/>
+        <Method name="setBookBorrowed" returnType="void" visibility="public">
+          <Argument type="int" name="bookBorrowed"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pais" package="entities" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="pais" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="pais"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPais" returnType="String" visibility="public"/>
+        <Method name="setPais" returnType="void" visibility="public">
+          <Argument type="String" name="pais"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Peliculas" package="entities" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="director" type="String" visibility="private"/>
+        <Field name="duracion" type="Float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="director"/>
+          <Argument type="float" name="duracion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+        </Method>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="setDirector" returnType="void" visibility="public">
+          <Argument type="String" name="director"/>
+        </Method>
+        <Method name="getDuracion" returnType="Float" visibility="public"/>
+        <Method name="setDuracion" returnType="void" visibility="public">
+          <Argument type="float" name="duracion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perros" package="entities" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="razaPerro" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="razaPerro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRazaPerro" returnType="String" visibility="public"/>
+        <Method name="setRazaPerro" returnType="void" visibility="public">
+          <Argument type="String" name="razaPerro"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="entities" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="product" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="product"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProduct" returnType="String" visibility="public"/>
+        <Method name="setProduct" returnType="void" visibility="public">
+          <Argument type="String" name="product"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Extra01Colecciones" package="" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Extra02Colecciones" package="" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AlumnoService" package="services" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="curso" type="ArrayList&lt;Alumno&gt;" visibility="private"/>
+        <Field name="leer" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarAlumno" returnType="void" visibility="public"/>
+        <Method name="crearAlumno" returnType="Alumno" visibility="private"/>
+        <Method name="notaFinal" returnType="void" visibility="public"/>
+        <Method name="buscarAlumno" returnType="boolean" visibility="private">
+          <Argument type="String" name="buscarAlumno"/>
+        </Method>
+        <Method name="promedioAlumno" returnType="float" visibility="private">
+          <Argument type="String" name="buscarAlumno"/>
+        </Method>
+        <Method name="clearDB" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CantanteFamService" package="Services" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarCantante" returnType="CantanteFamoso" visibility="public"/>
+        <Method name="mostrarCantantes" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;CantanteFamoso&gt;" name="cantFamlist"/>
+        </Method>
+        <Method name="eliminaCantante" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;CantanteFamoso&gt;" name="cantFamlist"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PaisService" package="services" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="conjuntoPaises" type="Set&lt;Pais&gt;" visibility="private"/>
+        <Field name="leer" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPais" returnType="Pais" visibility="private"/>
+        <Method name="addCountry" returnType="void" visibility="public"/>
+        <Method name="mostrarPaises" returnType="void" visibility="private"/>
+        <Method name="ordenAlfabetico" returnType="void" visibility="public"/>
+        <Method name="quitarPaisSet" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PeliculasService" package="services" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="moviesCinema" type="List&lt;Peliculas&gt;" visibility="private"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPelicula" returnType="Peliculas" visibility="private"/>
+        <Method name="carteleraCine" returnType="void" visibility="public"/>
+        <Method name="mostrarPeliculas" returnType="void" visibility="private"/>
+        <Method name="mostrarPeliculasHora" returnType="void" visibility="private"/>
+        <Method name="ordenarDuracionMayorMenor" returnType="void" visibility="private"/>
+        <Method name="ordenarDuracionMenorMayor" returnType="void" visibility="private"/>
+        <Method name="ordenarTituloAlfabeticamente" returnType="void" visibility="private"/>
+        <Method name="ordenarDirectorAlfabeticamente" returnType="void" visibility="private"/>
+        <Method name="visualizarPeliculas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PerroService" package="services" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarRaza" returnType="Perros" visibility="public"/>
+        <Method name="mostrarRazas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perros&gt;" name="razas"/>
+        </Method>
+        <Method name="eliminarRaza" returnType="boolean" visibility="public">
+          <Argument type="ArrayList&lt;Perros&gt;" name="razas"/>
+          <Argument type="String" name="razaQuitar"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductoService" package="services" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="stock" type="HashMap&lt;Producto, Float&gt;" visibility="private"/>
+        <Field name="sortedStock" type="TreeMap&lt;Producto, Float&gt;" visibility="private"/>
+        <Field name="leer" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarStock" returnType="void" visibility="private"/>
+        <Method name="modificarPrecioProducto" returnType="void" visibility="private"/>
+        <Method name="quitarDeStock" returnType="void" visibility="private"/>
+        <Method name="mostrarProductosStock" returnType="void" visibility="private"/>
+        <Method name="mostrarProductosOrdenados" returnType="void" visibility="private"/>
+        <Method name="mostrarProductosPorPrecioSimilar" returnType="void" visibility="private"/>
+        <Method name="appTienda" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="ordenarNombreDescendente" source="colecciones.utlilities.ComparadoresPerros" target="entities.Perros" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="services.AlumnoService" target="entities.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarAlfabeticamente" source="colecciones.utlilities.ComparadorPais" target="entities.Pais" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarNumbreAscendente" source="colecciones.utlilities.ComparadoresPerros" target="entities.Perros" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="services.PaisService" target="entities.Pais" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarDirectorAlfabetico" source="colecciones.utlilities.ComparadorPeliculas" target="entities.Peliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conjuntoPaises" source="services.PaisService" target="entities.Pais" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;Pais&gt;"/>
+    <UseRelation source="services.PerroService" target="entities.Perros" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarDuracionAscendente" source="colecciones.utlilities.ComparadorPeliculas" target="entities.Peliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stock" source="services.ProductoService" target="entities.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Producto, Float&gt;"/>
+    <UseRelation source="Services.CantanteFamService" target="Entities.CantanteFamoso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenAlfabeticoProductos" source="colecciones.utlilities.ComparadorProductos" target="entities.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarTituloAlfabetico" source="colecciones.utlilities.ComparadorPeliculas" target="entities.Peliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="curso" source="services.AlumnoService" target="entities.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <UseRelation source="services.PeliculasService" target="entities.Peliculas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sortedStock" source="services.ProductoService" target="entities.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="TreeMap&lt;Producto, Float&gt;"/>
+    <HasRelation name="ordenarDuracionDescendente" source="colecciones.utlilities.ComparadorPeliculas" target="entities.Peliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="moviesCinema" source="services.PeliculasService" target="entities.Peliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Peliculas&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
