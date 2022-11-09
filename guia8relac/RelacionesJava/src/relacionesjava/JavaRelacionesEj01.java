@@ -14,9 +14,6 @@ import relacionesjava.Utilities.ComparadorPersona;
  */
 public class JavaRelacionesEj01 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         /**
          * Realizar un programa para que una Persona pueda adoptar un Perro.
@@ -29,26 +26,31 @@ public class JavaRelacionesEj01 {
          * Persona.
          */
         //creamos personas por constructor
-        Persona kevin=new Persona("Kevin","Murgana",28,373737256);
-        Persona emanuel=new Persona("Emanuel","Villarin",28,37964886);
-        Persona regularGuy=new Persona("John","Doe",22,41964886);
+        Persona kevin = new Persona("Kevin", "Murgana", 28, 373737256);
+        Persona emanuel = new Persona("Emanuel", "Villarin", 28, 37964886);
+        Persona regularGuy = new Persona("John", "Doe", 22, 41964886);
+
         //creamos perros por constructor
-        Perro hellSpawn=new Perro("Baal",7900, "Inmenso");
-        Perro providence=new Perro("Dagon",15276953, "Gigante");
-        Perro doge=new Perro("Firulais",8, "Grande");
+        Perro hellSpawn = new Perro("Baal", 7900, "Inmenso");
+        Perro providence = new Perro("Dagon", 15276953, "Gigante");
+        Perro doge = new Perro("Firulais", 8, "Grande");
+
         //Seteamos la raza del perro con un enum
         hellSpawn.setRaza(RazaPerro.BULLSQUID);
         providence.setRaza(RazaPerro.HOUNDEYE);
         doge.setRaza(RazaPerro.PITBULL);
+
         //asignamos 1 mascota a cada persona
         kevin.setMascota(hellSpawn);
         emanuel.setMascota(providence);
         regularGuy.setMascota(doge);
+
         //creo una lista de personas
-        List<Persona> gente=new ArrayList();
+        List<Persona> gente = new ArrayList();
         gente.add(kevin);
         gente.add(emanuel);
         gente.add(regularGuy);
+
         //ordeno personas por apellido con un comparador y muestro por pantalla
         System.out.println("Personas y su mascota ordenadas por apellido");
         Collections.sort(gente, ComparadorPersona.compararApellido);
@@ -56,6 +58,7 @@ public class JavaRelacionesEj01 {
             System.out.println(aux);
         }
         System.out.println("");
+
         //ordeno personas por nombre con un comparador y muestro por pantalla
         System.out.println("Personas y su mascota ordenadas por nombre");
         Collections.sort(gente, ComparadorPersona.compararNombres);

@@ -2,7 +2,7 @@
 
 <ClassDiagram name="RelacionesJava">
   <ClassDiagramComponents>
-    <Class name="Perro" package="relacionesjava.Entities" visibility="public" xPosition="61.0" yPosition="372.0">
+    <Class name="Perro" package="relacionesjava.Entities" visibility="public" xPosition="12.0" yPosition="396.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="raza" type="RazaPerro" visibility="private"/>
@@ -43,7 +43,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="relacionesjava.Entities" visibility="public" xPosition="450.0" yPosition="315.0">
+    <Class name="Persona" package="relacionesjava.Entities" visibility="public" xPosition="544.0" yPosition="339.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -91,7 +91,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="JavaRelacionesEj01" package="relacionesjava" visibility="public" xPosition="319.0" yPosition="39.0">
+    <Class name="JavaRelacionesEj01" package="relacionesjava" visibility="public" xPosition="351.0" yPosition="39.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -100,7 +100,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ComparadorPersona" package="relacionesjava.Utilities" visibility="public" xPosition="577.0" yPosition="39.0">
+    <Class name="ComparadorPersona" package="relacionesjava.Utilities" visibility="public" xPosition="608.0" yPosition="39.0">
       <Fields>
         <Field name="compararNombres" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
         <Field name="compararApellido" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
@@ -108,7 +108,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Enum name="RazaPerro" package="relacionesjava.Enum" visibility="public" xPosition="61.0" yPosition="39.0">
+    <Enum name="RazaPerro" package="relacionesjava.Enum" visibility="public" xPosition="119.0" yPosition="39.0">
       <Literals>
         <Literal name="CORGI"/>
         <Literal name="PITBULL"/>
@@ -126,11 +126,11 @@
     </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="compararApellido" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="compararNombres" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="raza" source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="mascota" source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compararNombres" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mascota" source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="raza" source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compararApellido" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
