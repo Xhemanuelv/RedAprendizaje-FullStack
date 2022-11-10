@@ -2,7 +2,25 @@
 
 <ClassDiagram name="RelacionesJava">
   <ClassDiagramComponents>
-    <Class name="Blank" package="relacionesjava.Entities" visibility="public" xPosition="2183.0" yPosition="659.0">
+    <Class name="Baraja" package="relacionesjava.Entities" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="mazo" type="ArrayList&lt;Naipe&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Naipe&gt;" name="mazo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMazo" returnType="ArrayList&lt;Naipe&gt;" visibility="public"/>
+        <Method name="setMazo" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Naipe&gt;" name="mazo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Blank" package="relacionesjava.Entities" visibility="public" xPosition="320.0" yPosition="20.0">
       <Fields>
         <Field name="firingResult" type="String" visibility="private" isFinal="true"/>
       </Fields>
@@ -12,7 +30,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Bullet" package="relacionesjava.Entities" visibility="public" xPosition="2697.0" yPosition="659.0">
+    <Class name="Bullet" package="relacionesjava.Entities" visibility="public" xPosition="620.0" yPosition="20.0">
       <Fields>
         <Field name="firingResult" type="String" visibility="private" isFinal="true"/>
       </Fields>
@@ -22,7 +40,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Cylinder" package="relacionesjava.Entities" visibility="public" xPosition="2376.0" yPosition="659.0">
+    <Class name="Cylinder" package="relacionesjava.Entities" visibility="public" xPosition="790.0" yPosition="941.0">
       <Fields>
         <Field name="cylinder" type="ArrayList&lt;Object&gt;" visibility="private"/>
       </Fields>
@@ -40,7 +58,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="JuegoRuleta" package="relacionesjava.Entities" visibility="public" xPosition="1879.0" yPosition="975.0">
+    <Class name="JuegoRuleta" package="relacionesjava.Entities" visibility="public" xPosition="1124.0" yPosition="1301.0">
       <Fields>
         <Field name="players" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
         <Field name="tool" type="Revolver" visibility="private"/>
@@ -64,7 +82,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Jugador" package="relacionesjava.Entities" visibility="public" xPosition="1560.0" yPosition="937.0">
+    <Class name="Jugador" package="relacionesjava.Entities" visibility="public" xPosition="1566.0" yPosition="1263.0">
       <Fields>
         <Field name="id" type="int" visibility="public"/>
         <Field name="playerName" type="String" visibility="public"/>
@@ -96,7 +114,31 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Perro" package="relacionesjava.Entities" visibility="public" xPosition="1893.0" yPosition="6.0">
+    <Class name="Naipe" package="relacionesjava.Entities" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="palo" type="String" visibility="private"/>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="palo"/>
+          <Argument type="int" name="valor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPalo" returnType="String" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="String" name="palo"/>
+        </Method>
+        <Method name="getValor" returnType="int" visibility="public"/>
+        <Method name="setValor" returnType="void" visibility="public">
+          <Argument type="int" name="valor"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="relacionesjava.Entities" visibility="public" xPosition="2120.0" yPosition="20.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="raza" type="RazaPerro" visibility="private"/>
@@ -137,7 +179,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="relacionesjava.Entities" visibility="public" xPosition="2376.0" yPosition="6.0">
+    <Class name="Persona" package="relacionesjava.Entities" visibility="public" xPosition="20.0" yPosition="420.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -185,7 +227,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Revolver" package="relacionesjava.Entities" visibility="public" xPosition="2286.0" yPosition="911.0">
+    <Class name="Revolver" package="relacionesjava.Entities" visibility="public" xPosition="579.0" yPosition="1244.0">
       <Fields>
         <Field name="ammo" type="Cylinder" visibility="private"/>
         <Field name="name" type="MarcaRevolver" visibility="private"/>
@@ -221,7 +263,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="JavaRelacionesEj01" package="relacionesjava" visibility="public" xPosition="620.0" yPosition="420.0">
+    <Class name="JavaRelacionesEj01" package="relacionesjava" visibility="public" xPosition="1220.0" yPosition="420.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -230,7 +272,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="JavaRelacionesEj02" package="relacionesjava" visibility="public" xPosition="1814.0" yPosition="631.0">
+    <Class name="JavaRelacionesEj02" package="relacionesjava" visibility="public" xPosition="1520.0" yPosition="420.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -239,7 +281,23 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ComparadorPersona" package="relacionesjava.Utilities" visibility="public" xPosition="2894.0" yPosition="168.0">
+    <Class name="JavaRelacionesEj03" package="relacionesjava" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BarajaService" package="relacionesjava.Services" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaBaraja" returnType="Baraja" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ComparadorPersona" package="relacionesjava.Utilities" visibility="public" xPosition="20.0" yPosition="820.0">
       <Fields>
         <Field name="compararNombres" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
         <Field name="compararApellido" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
@@ -247,7 +305,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Enum name="MarcaRevolver" package="relacionesjava.Enum" visibility="public" xPosition="2828.0" yPosition="997.0">
+    <Enum name="MarcaRevolver" package="relacionesjava.Enum" visibility="public" xPosition="596.0" yPosition="941.0">
       <Literals>
         <Literal name="COLT"/>
         <Literal name="SMITH_WESSON"/>
@@ -256,7 +314,7 @@
         <Literal name="ASTRA"/>
       </Literals>
     </Enum>
-    <Enum name="RazaPerro" package="relacionesjava.Enum" visibility="public" xPosition="1578.0" yPosition="6.0">
+    <Enum name="RazaPerro" package="relacionesjava.Enum" visibility="public" xPosition="920.0" yPosition="420.0">
       <Literals>
         <Literal name="CORGI"/>
         <Literal name="PITBULL"/>
@@ -274,22 +332,22 @@
     </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="players" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+    <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Enum.MarcaRevolver" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="compararNombres" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ammo" source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="compararApellido" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="raza" source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="ammo" source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Contains" source="relacionesjava.Entities.Cylinder" target="relacionesjava.Entities.Blank" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="relacionesjava.JavaRelacionesEj02" target="relacionesjava.Entities.JuegoRuleta"/>
-    <HasRelation name="players" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
-    <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="tool" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="mascota" source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="Contains" source="relacionesjava.Entities.Cylinder" target="relacionesjava.Entities.Bullet" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Enum.MarcaRevolver" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="name" source="relacionesjava.Entities.Revolver" target="relacionesjava.Enum.MarcaRevolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tool" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Services.BarajaService" target="relacionesjava.Entities.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mazo" source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Naipe&gt;"/>
   </ClassDiagramRelations>
 </ClassDiagram>

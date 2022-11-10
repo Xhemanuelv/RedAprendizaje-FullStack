@@ -99,8 +99,9 @@ public class JuegoRuletaService {
      * !!!!https://comercioyjusticia.info/leyes-y-comentarios/ruleta-rusa/ en el
      * link se ve algo de informacion pertinente a legislacion sobre este
      * "juego"
+     * @return 
      */
-    public void comenzarJuegoRuleta() {
+    public JuegoRuleta comenzarJuegoRuleta() {
         JuegoRuleta game = new JuegoRuleta();
         System.out.println("Ingrese la cantidad de jugadores (max 6)");
         int idJugador = leer.nextInt();
@@ -134,7 +135,17 @@ public class JuegoRuletaService {
             default ->
                 System.out.println("Entrada invalida");
         }
-
+        return new JuegoRuleta(game.getPlayers(), tool);
+    }
+    
+    private void callToArms(){
+        JuegoRuleta meme=comenzarJuegoRuleta();
+        Bullet b1=new Bullet();
+        if (meme.getTool().getAmmo().getCylinder().contains(b1)) {
+            System.out.println("Arma Cargada y lista jugaran con un "+meme.getTool().getName().getGunName()+" calibre :" +meme.getTool().getName().getCaliber().toString());
+        }else {
+            System.out.println("System exception found in"+((int)(Math.random()*27432+1)));
+        }
     }
 
     /**
@@ -275,7 +286,7 @@ public class JuegoRuletaService {
         boolean endGame = false;
 
         boolean clockwise = game.getTool().getName().equals(MarcaRevolver.SMITH_WESSON);
-
+        callToArms();
         if (clockwise) {
             for (int i = 0; i < (game.getTool().getChambered().length); i++) {
                 System.out.println("Turno Jugador" + game.getPlayers().get(i).id);
