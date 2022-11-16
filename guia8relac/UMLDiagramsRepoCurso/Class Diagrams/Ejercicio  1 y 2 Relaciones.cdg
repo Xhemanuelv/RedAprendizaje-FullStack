@@ -138,7 +138,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Perro" package="relacionesjava.Entities" visibility="public" xPosition="2120.0" yPosition="20.0">
+    <Class name="Perro" package="relacionesjava.Entities" visibility="public" xPosition="500.0" yPosition="420.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="raza" type="RazaPerro" visibility="private"/>
@@ -179,7 +179,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="relacionesjava.Entities" visibility="public" xPosition="20.0" yPosition="420.0">
+    <Class name="Persona" package="relacionesjava.Entities" visibility="public" xPosition="20.0" yPosition="431.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -290,14 +290,14 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="BarajaService" package="relacionesjava.Services" visibility="public" xPosition="2120.0" yPosition="420.0">
+    <Class name="BarajaService" package="relacionesjava.Services" visibility="public" xPosition="462.0" yPosition="197.0">
       <Fields/>
       <Constructors/>
       <Methods>
         <Method name="creaBaraja" returnType="Baraja" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ComparadorPersona" package="relacionesjava.Utilities" visibility="public" xPosition="20.0" yPosition="820.0">
+    <Class name="ComparadorPersona" package="relacionesjava.Utilities" visibility="public" xPosition="84.0" yPosition="248.0">
       <Fields>
         <Field name="compararNombres" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
         <Field name="compararApellido" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
@@ -314,7 +314,7 @@
         <Literal name="ASTRA"/>
       </Literals>
     </Enum>
-    <Enum name="RazaPerro" package="relacionesjava.Enum" visibility="public" xPosition="920.0" yPosition="420.0">
+    <Enum name="RazaPerro" package="relacionesjava.Enum" visibility="public" xPosition="966.0" yPosition="431.0">
       <Literals>
         <Literal name="CORGI"/>
         <Literal name="PITBULL"/>
@@ -332,22 +332,22 @@
     </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="players" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
-    <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Enum.MarcaRevolver" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mazo" source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Naipe&gt;"/>
     <HasRelation name="compararNombres" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="ammo" source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="compararApellido" source="relacionesjava.Utilities.ComparadorPersona" target="relacionesjava.Entities.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="raza" source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="mascota" source="relacionesjava.Entities.Persona" target="relacionesjava.Entities.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="name" source="relacionesjava.Entities.Revolver" target="relacionesjava.Enum.MarcaRevolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="tool" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="relacionesjava.Services.BarajaService" target="relacionesjava.Entities.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="mazo" source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Naipe&gt;"/>
+    <UseRelation source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="raza" source="relacionesjava.Entities.Perro" target="relacionesjava.Enum.RazaPerro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ammo" source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tool" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Entities.Cylinder" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="players" source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+    <UseRelation source="relacionesjava.Entities.JuegoRuleta" target="relacionesjava.Entities.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Entities.Revolver" target="relacionesjava.Enum.MarcaRevolver" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

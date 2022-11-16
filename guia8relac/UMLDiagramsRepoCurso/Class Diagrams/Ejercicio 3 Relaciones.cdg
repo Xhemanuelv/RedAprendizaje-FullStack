@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RelacionesJava">
+  <ClassDiagramComponents>
+    <Class name="Baraja" package="relacionesjava.Entities" visibility="public" xPosition="87.0" yPosition="119.0">
+      <Fields>
+        <Field name="mazo" type="ArrayList&lt;Naipe&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Naipe&gt;" name="mazo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMazo" returnType="ArrayList&lt;Naipe&gt;" visibility="public"/>
+        <Method name="setMazo" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Naipe&gt;" name="mazo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Naipe" package="relacionesjava.Entities" visibility="public" xPosition="541.0" yPosition="210.0">
+      <Fields>
+        <Field name="palo" type="String" visibility="private"/>
+        <Field name="valor" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="palo"/>
+          <Argument type="int" name="valor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPalo" returnType="String" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="String" name="palo"/>
+        </Method>
+        <Method name="getValor" returnType="int" visibility="public"/>
+        <Method name="setValor" returnType="void" visibility="public">
+          <Argument type="int" name="valor"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="JavaRelacionesEj03" package="relacionesjava" visibility="public" xPosition="398.0" yPosition="38.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BarajaService" package="relacionesjava.Services" visibility="public" xPosition="87.0" yPosition="403.0">
+      <Fields>
+        <Field name="monton" type="ArrayList&lt;Naipe&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="creaBaraja" returnType="Baraja" visibility="public"/>
+        <Method name="barajarMazo" returnType="void" visibility="public">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+        <Method name="cartasDisponibles" returnType="void" visibility="public">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+        <Method name="siguienteCarta" returnType="Naipe" visibility="public">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+        <Method name="darCartas" returnType="void" visibility="public">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+        <Method name="cartasMonton" returnType="void" visibility="public">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+        <Method name="mostrarBaraja" returnType="void" visibility="public">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+        <Method name="separarPorPalo" returnType="void" visibility="private">
+          <Argument type="Baraja" name="mazo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparadorPalos" package="relacionesjava.Utilities" visibility="public" xPosition="504.0" yPosition="572.0">
+      <Fields>
+        <Field name="separarPalos" type="Comparator&lt;Naipe&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="monton" source="relacionesjava.Services.BarajaService" target="relacionesjava.Entities.Naipe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Naipe&gt;"/>
+    <HasRelation name="separarPalos" source="relacionesjava.Utilities.ComparadorPalos" target="relacionesjava.Entities.Naipe" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mazo" source="relacionesjava.Entities.Baraja" target="relacionesjava.Entities.Naipe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Naipe&gt;"/>
+    <UseRelation source="relacionesjava.Services.BarajaService" target="relacionesjava.Entities.Naipe" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="relacionesjava.Services.BarajaService" target="relacionesjava.Entities.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

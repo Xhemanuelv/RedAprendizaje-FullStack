@@ -2,7 +2,7 @@
 
 <ClassDiagram name="EjemploRelaciones">
   <ClassDiagramComponents>
-    <Class name="Ej01Main" package="ej01" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="Ej01Main" package="ej01" visibility="public" xPosition="2401.0" yPosition="603.0">
       <Fields>
         <Field name="leer" type="Scanner" visibility="private" isStatic="true"/>
         <Field name="pps" type="PPServicios" visibility="private" isStatic="true"/>
@@ -14,7 +14,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Perro" package="ej01.entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Perro" package="ej01.entidades" visibility="public" xPosition="2311.0" yPosition="1015.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="raza" type="String" visibility="private"/>
@@ -50,7 +50,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="ej01.entidades" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Persona" package="ej01.entidades" visibility="public" xPosition="2762.0" yPosition="853.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -92,7 +92,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="PPServicios" package="ej01.servicios" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="PPServicios" package="ej01.servicios" visibility="public" xPosition="2414.0" yPosition="809.0">
       <Fields>
         <Field name="leer" type="Scanner" visibility="private"/>
       </Fields>
@@ -102,7 +102,7 @@
         <Method name="crearPerro" returnType="Perro" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Ej02Main" package="ej02" visibility="public" xPosition="1220.0" yPosition="20.0">
+    <Class name="Ej02Main" package="ej02" visibility="public" xPosition="268.0" yPosition="266.0">
       <Fields>
         <Field name="leer" type="Scanner" visibility="private" isStatic="true"/>
       </Fields>
@@ -113,7 +113,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Juego" package="ej02.entidades" visibility="public" xPosition="1520.0" yPosition="20.0">
+    <Class name="Juego" package="ej02.entidades" visibility="public" xPosition="1359.0" yPosition="1481.0">
       <Fields>
         <Field name="r" type="Revolver" visibility="private"/>
         <Field name="jugadores" type="List&lt;Jugador&gt;" visibility="private"/>
@@ -144,7 +144,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Jugador" package="ej02.entidades" visibility="public" xPosition="1820.0" yPosition="20.0">
+    <Class name="Jugador" package="ej02.entidades" visibility="public" xPosition="1626.0" yPosition="1871.0">
       <Fields>
         <Field name="id" type="Integer" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -175,7 +175,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Revolver" package="ej02.entidades" visibility="public" xPosition="2120.0" yPosition="20.0">
+    <Class name="Revolver" package="ej02.entidades" visibility="public" xPosition="1767.0" yPosition="1472.0">
       <Fields>
         <Field name="posicionActual" type="Integer" visibility="private"/>
         <Field name="posicionAgua" type="Integer" visibility="private"/>
@@ -202,7 +202,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Ej03Main" package="ej03" visibility="public" xPosition="20.0" yPosition="420.0">
+    <Class name="Ej03Main" package="ej03" visibility="public" xPosition="228.0" yPosition="1346.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -211,7 +211,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Baraja" package="ej03.entidades" visibility="public" xPosition="320.0" yPosition="420.0">
+    <Class name="Baraja" package="ej03.entidades" visibility="public" xPosition="337.0" yPosition="1913.0">
       <Fields>
         <Field name="cartas" type="ArrayList&lt;Carta&gt;" visibility="private"/>
       </Fields>
@@ -229,7 +229,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Carta" package="ej03.entidades" visibility="public" xPosition="620.0" yPosition="420.0">
+    <Class name="Carta" package="ej03.entidades" visibility="public" xPosition="337.0" yPosition="1542.0">
       <Fields>
         <Field name="numero" type="Integer" visibility="private"/>
         <Field name="palo" type="Palo" visibility="private"/>
@@ -253,15 +253,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Enum name="Palo" package="ej03.enums" visibility="public" xPosition="920.0" yPosition="420.0">
-      <Literals>
-        <Literal name="ESPADA"/>
-        <Literal name="BASTO"/>
-        <Literal name="ORO"/>
-        <Literal name="COPA"/>
-      </Literals>
-    </Enum>
-    <Class name="BarajaServicio" package="ej03.servicios" visibility="public" xPosition="1220.0" yPosition="420.0">
+    <Class name="BarajaServicio" package="ej03.servicios" visibility="public" xPosition="57.0" yPosition="1799.0">
       <Fields>
         <Field name="mazoInicial" type="Baraja" visibility="private"/>
         <Field name="cartasEntregadas" type="Baraja" visibility="private"/>
@@ -280,7 +272,7 @@
         <Method name="menu" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="EjC02Main" package="ejC02" visibility="public" xPosition="1520.0" yPosition="420.0">
+    <Class name="EjC02Main" package="ejC02" visibility="public" xPosition="1637.0" yPosition="1325.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -289,7 +281,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Asiento" package="ejC02.entidades" visibility="public" xPosition="1820.0" yPosition="420.0">
+    <Class name="Asiento" package="ejC02.entidades" visibility="public" xPosition="1129.0" yPosition="853.0">
       <Fields>
         <Field name="ubicacion" type="String" visibility="private"/>
         <Field name="e" type="Espectador" visibility="private"/>
@@ -313,7 +305,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Cine" package="ejC02.entidades" visibility="public" xPosition="2120.0" yPosition="420.0">
+    <Class name="Cine" package="ejC02.entidades" visibility="public" xPosition="1105.0" yPosition="266.0">
       <Fields>
         <Field name="sala" type="Asiento" visibility="private"/>
         <Field name="asientosLibres" type="List&lt;String&gt;" visibility="private"/>
@@ -349,7 +341,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Espectador" package="ejC02.entidades" visibility="public" xPosition="20.0" yPosition="820.0">
+    <Class name="Espectador" package="ejC02.entidades" visibility="public" xPosition="1537.0" yPosition="809.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="edad" type="Integer" visibility="private"/>
@@ -379,7 +371,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Pelicula" package="ejC02.entidades" visibility="public" xPosition="320.0" yPosition="820.0">
+    <Class name="Pelicula" package="ejC02.entidades" visibility="public" xPosition="520.0" yPosition="266.0">
       <Fields>
         <Field name="titulo" type="String" visibility="private"/>
         <Field name="duracionEnMinutos" type="Integer" visibility="private"/>
@@ -415,17 +407,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Enum name="Columna" package="ejC02.enums" visibility="public" xPosition="620.0" yPosition="820.0">
-      <Literals>
-        <Literal name="A"/>
-        <Literal name="B"/>
-        <Literal name="C"/>
-        <Literal name="D"/>
-        <Literal name="E"/>
-        <Literal name="F"/>
-      </Literals>
-    </Enum>
-    <Class name="CineServicio" package="ejC02.servicios" visibility="public" xPosition="920.0" yPosition="820.0">
+    <Class name="CineServicio" package="ejC02.servicios" visibility="public" xPosition="1655.0" yPosition="342.0">
       <Fields>
         <Field name="leer" type="Scanner" visibility="private"/>
       </Fields>
@@ -448,33 +430,52 @@
         </Method>
       </Methods>
     </Class>
+    <Enum name="Palo" package="ej03.enums" visibility="public" xPosition="70.0" yPosition="1542.0">
+      <Literals>
+        <Literal name="ESPADA"/>
+        <Literal name="BASTO"/>
+        <Literal name="ORO"/>
+        <Literal name="COPA"/>
+      </Literals>
+    </Enum>
+    <Enum name="Columna" package="ejC02.enums" visibility="public" xPosition="861.0" yPosition="853.0">
+      <Literals>
+        <Literal name="A"/>
+        <Literal name="B"/>
+        <Literal name="C"/>
+        <Literal name="D"/>
+        <Literal name="E"/>
+        <Literal name="F"/>
+      </Literals>
+    </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="ejC02.entidades.Cine" target="ejC02.entidades.Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej02.entidades.Juego" target="ej02.entidades.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="pps" source="ej01.Ej01Main" target="ej01.servicios.PPServicios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej03.servicios.BarajaServicio" target="ej03.entidades.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ejC02.entidades.Cine" target="ejC02.entidades.Asiento" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej02.entidades.Jugador" target="ej02.entidades.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej01.entidades.Persona" target="ej01.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej02.entidades.Juego" target="ej02.entidades.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ejC02.entidades.Asiento" target="ejC02.entidades.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="sala" source="ejC02.entidades.Cine" target="ejC02.entidades.Asiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="e" source="ejC02.entidades.Asiento" target="ejC02.entidades.Espectador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="r" source="ej02.entidades.Juego" target="ej02.entidades.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej01.servicios.PPServicios" target="ej01.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="jugadores" source="ej02.entidades.Juego" target="ej02.entidades.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Jugador&gt;"/>
-    <UseRelation source="ej01.servicios.PPServicios" target="ej01.entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej03.entidades.Carta" target="ej03.enums.Palo" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="palo" source="ej03.entidades.Carta" target="ej03.enums.Palo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ej03.entidades.Baraja" target="ej03.entidades.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="pelicula" source="ejC02.entidades.Cine" target="ejC02.entidades.Pelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ejC02.servicios.CineServicio" target="ejC02.entidades.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="cartasEntregadas" source="ej03.servicios.BarajaServicio" target="ej03.entidades.Baraja" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ejC02.servicios.CineServicio" target="ejC02.entidades.Cine" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="mazoInicial" source="ej03.servicios.BarajaServicio" target="ej03.entidades.Baraja" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="perro" source="ej01.entidades.Persona" target="ej01.entidades.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sala" source="ejC02.entidades.Cine" target="ejC02.entidades.Asiento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="ejC02.entidades.Asiento" target="ejC02.enums.Columna" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="palo" source="ej03.entidades.Carta" target="ej03.enums.Palo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej01.entidades.Persona" target="ej01.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pps" source="ej01.Ej01Main" target="ej01.servicios.PPServicios" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.entidades.Cine" target="ejC02.entidades.Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej02.entidades.Jugador" target="ej02.entidades.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jugadores" source="ej02.entidades.Juego" target="ej02.entidades.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Jugador&gt;"/>
+    <UseRelation source="ejC02.servicios.CineServicio" target="ejC02.entidades.Cine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej03.servicios.BarajaServicio" target="ej03.entidades.Baraja" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej02.entidades.Juego" target="ej02.entidades.Revolver" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="cartas" source="ej03.entidades.Baraja" target="ej03.entidades.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <UseRelation source="ejC02.entidades.Cine" target="ejC02.entidades.Asiento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej02.entidades.Juego" target="ej02.entidades.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej03.entidades.Carta" target="ej03.enums.Palo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mazoInicial" source="ej03.servicios.BarajaServicio" target="ej03.entidades.Baraja" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej01.servicios.PPServicios" target="ej01.entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pelicula" source="ejC02.entidades.Cine" target="ejC02.entidades.Pelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="ej03.servicios.BarajaServicio" target="ej03.entidades.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r" source="ej02.entidades.Juego" target="ej02.entidades.Revolver" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.entidades.Asiento" target="ejC02.entidades.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="e" source="ejC02.entidades.Asiento" target="ejC02.entidades.Espectador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej03.entidades.Baraja" target="ej03.entidades.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej01.servicios.PPServicios" target="ej01.entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cartasEntregadas" source="ej03.servicios.BarajaServicio" target="ej03.entidades.Baraja" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejC02.servicios.CineServicio" target="ejC02.entidades.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

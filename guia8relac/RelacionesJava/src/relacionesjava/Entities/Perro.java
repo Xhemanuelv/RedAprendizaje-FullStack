@@ -12,8 +12,18 @@ public class Perro {
     private RazaPerro raza;
     private int edad;
     private String tamanio;
+    private boolean adoptado=false;
 
     public Perro() {
+    }
+
+    /**
+     * Constructor Perro only by name
+     *
+     * @param nombre
+     */
+    public Perro(String nombre) {
+        this.nombre = nombre;
     }
 
     public Perro(String nombre, int edad, String tamaño) {
@@ -61,9 +71,25 @@ public class Perro {
         this.tamanio = tamaño;
     }
 
+    public String getTamanio() {
+        return tamanio;
+    }
+
+    public void setTamanio(String tamanio) {
+        this.tamanio = tamanio;
+    }
+
+    public boolean isAdoptado() {
+        return adoptado;
+    }
+
+    public void setAdoptado(boolean adoptado) {
+        this.adoptado = adoptado;
+    }
+
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamaño " + tamanio + '}';
+        return "Perro{" + "nombre=" + nombre +", adoptado=" + adoptado + '}';
     }
 
 }

@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Guia8 Ej1">
   <ClassDiagramComponents>
-    <Class name="Perro" package="Entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="Perro" package="Entidades" visibility="public" xPosition="569.0" yPosition="373.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="raza" type="RazasPerros" visibility="private"/>
@@ -45,7 +45,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="Entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Persona" package="Entidades" visibility="public" xPosition="27.0" yPosition="383.0">
       <Fields>
         <Field name="nombre" type="String" visibility="package"/>
         <Field name="apellido" type="String" visibility="package"/>
@@ -87,7 +87,16 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Enum name="RazasPerros" package="Enumeraciones" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Guia8Ej1" package="guia8.ej1" visibility="public" xPosition="500.0" yPosition="194.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="RazasPerros" package="Enumeraciones" visibility="public" xPosition="1113.0" yPosition="419.0">
       <Literals>
         <Literal name="Labrador"/>
         <Literal name="Golden_retriever"/>
@@ -97,22 +106,13 @@
         <Literal name="Rottweiler"/>
       </Literals>
     </Enum>
-    <Class name="Guia8Ej1" package="guia8.ej1" visibility="public" xPosition="920.0" yPosition="20.0">
-      <Fields/>
-      <Constructors/>
-      <Methods>
-        <Method name="main" returnType="void" visibility="public" isStatic="true">
-          <Argument type="String[]" name="args"/>
-        </Method>
-      </Methods>
-    </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="raza" source="Entidades.Perro" target="Enumeraciones.RazasPerros" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="dueño" source="Entidades.Perro" target="Entidades.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="mascota" source="Entidades.Persona" target="Entidades.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="Entidades.Persona" target="Entidades.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="Entidades.Perro" target="Entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dueño" source="Entidades.Perro" target="Entidades.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="Entidades.Perro" target="Enumeraciones.RazasPerros" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="raza" source="Entidades.Perro" target="Enumeraciones.RazasPerros" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

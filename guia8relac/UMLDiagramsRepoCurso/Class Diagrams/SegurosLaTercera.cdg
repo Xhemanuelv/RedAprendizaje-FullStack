@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="SegurosLaTercera">
+  <ClassDiagramComponents>
+    <Class name="Clientes" package="" visibility="public" xPosition="30.0" yPosition="391.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="documento" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Vehiculos" package="" visibility="public" xPosition="644.0" yPosition="324.0">
+      <Fields>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="numMotor" type="String" visibility="private"/>
+        <Field name="chasis" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="tipo" type="TipoVehiculo" visibility="private"/>
+        <Field name="marcaVehic" type="Marca" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Polizas" package="" visibility="public" xPosition="261.0" yPosition="343.0">
+      <Fields>
+        <Field name="vehiculosCliente" type="ArrayList&lt;Vehiculos&gt;" visibility="private"/>
+        <Field name="cliente" type="Clientes" visibility="private"/>
+        <Field name="numPoliza" type="String" visibility="private"/>
+        <Field name="fechaInicioPoliza" type="Date" visibility="private"/>
+        <Field name="fechaFinPoliza" type="Date" visibility="private"/>
+        <Field name="cantidadCuotas" type="int" visibility="private"/>
+        <Field name="medioDePago" type="FormaPago" visibility="private"/>
+        <Field name="montoTotalAsegurado" type="double" visibility="private"/>
+        <Field name="incluyeGranizo" type="boolean" visibility="private"/>
+        <Field name="montoMaximoGranizo" type="double" visibility="private"/>
+        <Field name="aseguradoContra" type="TipoCobertura" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Enum name="TipoVehiculo" package="" visibility="public" xPosition="644.0" yPosition="58.0">
+      <Literals>
+        <Literal name="SEDAN"/>
+        <Literal name="CUPE"/>
+        <Literal name="HATCHBACK"/>
+        <Literal name="DEPORTIVO"/>
+        <Literal name="PICKUP"/>
+        <Literal name="SUV"/>
+        <Literal name="DESCAPOTABLE"/>
+        <Literal name="TODOTERRENO"/>
+      </Literals>
+    </Enum>
+    <Enum name="Marca" package="" visibility="public" xPosition="644.0" yPosition="617.0">
+      <Literals>
+        <Literal name="FORD"/>
+        <Literal name="BMW"/>
+        <Literal name="ROLLS_ROYCE"/>
+        <Literal name="MINI"/>
+        <Literal name="MAYBACH"/>
+        <Literal name="MERCEDES-BENZ"/>
+        <Literal name="SMART"/>
+        <Literal name="ALFA_ROMEO"/>
+        <Literal name="ABARTH"/>
+        <Literal name="CHRYSLER"/>
+        <Literal name="DODGE"/>
+        <Literal name="FIAT"/>
+        <Literal name="JEEP"/>
+        <Literal name="LANCIA"/>
+        <Literal name="MASERATI"/>
+        <Literal name="RAM"/>
+        <Literal name="FERRARI"/>
+        <Literal name="VOLVO"/>
+        <Literal name="CADILLAC"/>
+        <Literal name="CHEVROLET"/>
+        <Literal name="GMC"/>
+        <Literal name="BUICK"/>
+        <Literal name="HONDA"/>
+        <Literal name="KIA"/>
+        <Literal name="HYUNDAI"/>
+        <Literal name="RENAULT"/>
+        <Literal name="NISSAN"/>
+        <Literal name="LADA"/>
+        <Literal name="PEUGEOT"/>
+        <Literal name="CITROEN"/>
+        <Literal name="SUZUKI"/>
+        <Literal name="LAND_ROVER"/>
+        <Literal name="TOYOTA"/>
+        <Literal name="AUDI"/>
+        <Literal name="VOLKSWAGEN"/>
+      </Literals>
+    </Enum>
+    <Enum name="FormaPago" package="" visibility="public" xPosition="2.0" yPosition="813.0">
+      <Literals>
+        <Literal name="TRANSFERENCIA_BANCARIA"/>
+        <Literal name="DEBITO"/>
+        <Literal name="EFECTIVO"/>
+        <Literal name="TRANSFERENCIA_BILLETERA_ELECTRONICA"/>
+      </Literals>
+    </Enum>
+    <Enum name="TipoCobertura" package="" visibility="public" xPosition="306.0" yPosition="813.0">
+      <Literals>
+        <Literal name="RESPONSABILIDAD_CBYP"/>
+        <Literal name="RESPONSABILIDAD_CIVIL_CATASTROFICA"/>
+        <Literal name="ASISTENCIAL_Y_VIAJES"/>
+        <Literal name="DEFENSA_JURIDICA"/>
+        <Literal name="GASTOS_MEDICOS_A_OCUPANTES"/>
+        <Literal name="ROBO_TOTAL"/>
+        <Literal name="DANIOS_MATERIALES"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Polizas" target="Clientes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Marca" source="Vehiculos" target="Marca" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Polizas" target="FormaPago" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Polizas" target="TipoCobertura" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="aseguradoContra" source="Polizas" target="TipoCobertura" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="vehiculosClient" source="Polizas" target="Vehiculos" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <UseRelation name="" source="Vehiculos" target="Marca" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Tipo" source="Vehiculos" target="TipoVehiculo" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Vehiculo" source="Polizas" target="Vehiculos" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Vehiculos" target="TipoVehiculo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="medioPago" source="Polizas" target="FormaPago" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Cliente" source="Polizas" target="Clientes" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

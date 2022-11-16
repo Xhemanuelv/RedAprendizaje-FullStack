@@ -78,7 +78,7 @@ public class BarajaService {
     public void darCartas(Baraja mazo) {
         Scanner leer = new Scanner(System.in);
         System.out.println("Elija cuantas cartas repartira");
-        int x = leer.nextInt(), cont = 0;
+        int x = leer.nextInt();
         boolean hayCartas = mazo.getMazo().isEmpty(), haySuficientes = mazo.getMazo().size() >= x;
         //   TRUE               FALSE
         if (haySuficientes && !hayCartas) {

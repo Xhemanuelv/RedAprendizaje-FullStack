@@ -12,9 +12,27 @@ public class Persona {
     private int dni;
     private Perro mascota;
 
+    /**
+     * Empty constructor
+     */
     public Persona() {
     }
 
+    /**
+     * Name constructor only
+     * @param nombre 
+     */
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * Constructor 1
+     * @param nombre
+     * @param apellido
+     * @param edad
+     * @param dni 
+     */
     public Persona(String nombre, String apellido, int edad, int dni) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -22,6 +40,14 @@ public class Persona {
         this.dni = dni;
     }
 
+    /**
+     * Constructor Fill all data
+     * @param nombre
+     * @param apellido
+     * @param edad
+     * @param dni
+     * @param mascota 
+     */
     public Persona(String nombre, String apellido, int edad, int dni, Perro mascota) {
         this.nombre = nombre;
         this.apellido = apellido;
