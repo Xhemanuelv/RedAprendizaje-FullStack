@@ -24,11 +24,11 @@ public class Animal implements RuidoAnimal {
         this.raza = raza;
     }
 
-    public String getName() {
+    protected String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
@@ -36,23 +36,23 @@ public class Animal implements RuidoAnimal {
         return alimento;
     }
 
-    public void setAlimento(String alimento) {
+    protected void setAlimento(String alimento) {
         this.alimento = alimento;
     }
 
-    public Integer getEdad() {
+    protected Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(Integer edad) {
+    protected void setEdad(Integer edad) {
         this.edad = edad;
     }
 
-    public String getRaza() {
+    protected String getRaza() {
         return raza;
     }
 
-    public void setRaza(String raza) {
+    protected void setRaza(String raza) {
         this.raza = raza;
     }
 
@@ -63,6 +63,11 @@ public class Animal implements RuidoAnimal {
     @Override
     public String hacerRuido() {
         return ruido;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" + "name=" + name + ", alimento=" + alimento + ", edad=" + edad + ", raza=" + raza + ", ruido=" + ruido + '}';
     }
 
 }

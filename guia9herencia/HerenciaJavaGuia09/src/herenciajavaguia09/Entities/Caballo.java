@@ -16,8 +16,13 @@ public class Caballo extends Animal implements RuidoAnimal {
     }
 
     @Override
+    public String toString() {
+        return "Caballo" + "{" + "Nombre=" + getName() + ", Alimento=" + getAlimento() + ", Edad=" + getEdad() + ", Raza=" + getRaza() + '}';
+    }
+
+    @Override
     public String hacerRuido() {
-        ruido="[HORSE NOISES]";
+        ruido = "[HORSE NOISES]";
         return ruido;
     }
 

@@ -11,15 +11,18 @@ public class Gato extends Animal implements RuidoAnimal {
     public Gato() {
     }
 
-    
-    
     public Gato(String name, String alimento, Integer edad, String raza) {
         super(name, alimento, edad, raza);
     }
 
     @Override
+    public String toString() {
+        return "Gato" + "{" + "Nombre=" + getName() + ", Alimento=" + getAlimento() + ", Edad=" + getEdad() + ", Raza=" + getRaza() + '}';
+    }
+
+    @Override
     public String hacerRuido() {
-        ruido="Miau";
+        ruido = "Miau";
         return ruido;
     }
 }

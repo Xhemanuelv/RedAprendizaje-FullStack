@@ -4,16 +4,15 @@ import herenciajavaguia09.Entities.Animal;
 import herenciajavaguia09.Entities.Caballo;
 import herenciajavaguia09.Entities.Gato;
 import herenciajavaguia09.Entities.Perro;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author Xhemanuelv
  */
-public class ManosALaObra1 {
+public class Guia09Ej01Herencia {
 
     /**
+     * Se ingcluye el manos a la obra 
      * EJERCICIO ANIMAL Vamos a crear una clase Animal que tenga un método
      * hacerRuido() que devuelva un saludo “Hola”. Luego haremos clase Perro y
      * clase Gato que extiendan de Animal y sobreescriban el método hacerRuido()
@@ -40,7 +39,7 @@ public class ManosALaObra1 {
         Animal gato = new Gato("Pelusa", "Croquetas", 6, "Tabi");
         Animal caballo = new Caballo("Spark", "Heno", 9, "Fino");
         
-        List<String> lista=new ArrayList();
+        
         System.out.println("Ruido del animal");
         System.out.println(perro.hacerRuido());
         System.out.println(gato.hacerRuido());
@@ -49,6 +48,9 @@ public class ManosALaObra1 {
         perro.Alimentarse();
         gato.Alimentarse();
         caballo.Alimentarse();
+        System.out.println(perro);
+        System.out.println(gato);
+        System.out.println(caballo);
     }
 
 }

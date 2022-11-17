@@ -18,6 +18,11 @@ public final class Perro extends Animal implements RuidoAnimal {
     }
 
     @Override
+    public String toString() {
+        return "Perro"+"{"+"Nombre="+getName()+", Alimento="+getAlimento()+", Edad="+getEdad()+", Raza="+getRaza()+'}';
+    }
+    
+    @Override
     public String hacerRuido() {
         ruido="Guau";
         return ruido;
