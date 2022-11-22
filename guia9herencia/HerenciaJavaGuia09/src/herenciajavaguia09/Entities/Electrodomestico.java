@@ -4,7 +4,7 @@ package herenciajavaguia09.Entities;
  *
  * @author Xhemanuelv
  */
-public abstract class Electrodomestico {
+public class Electrodomestico {
 
     protected Float precio;
     protected String color;

@@ -33,4 +33,9 @@ public final class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
+    @Override
+    public String toString() {
+        return "Electrodomestico{Lavadora[" + "precio=" + precio + ", color=" + color + ", eficienciaEnergetica=" + eficienciaEnergetica + ", peso=" + peso + ", carga=" + carga + "]" + '}';
+    }
+
 }
