@@ -14,6 +14,7 @@ public class LavadoraService extends ElectrodomesticoService {
         System.out.println("Ingrese carga maxima lavadora");
         Float cargaMaxima = leer.nextFloat();
         precioFinal(father, cargaMaxima);
+        
         return new Lavadora(father.getPrecio(), father.getColor(), father.getEficienciaEnergetica(), father.getPeso(), cargaMaxima);
     }
     

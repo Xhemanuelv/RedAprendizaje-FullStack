@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="HerenciaJavaGuia09">
+  <ClassDiagramComponents>
+    <Class name="Animal" package="herenciajavaguia09.Entities" visibility="public" xPosition="185.0" yPosition="92.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+        <Field name="alimento" type="String" visibility="protected"/>
+        <Field name="edad" type="Integer" visibility="protected"/>
+        <Field name="raza" type="String" visibility="protected"/>
+        <Field name="ruido" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="protected">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="protected"/>
+        <Method name="setName" returnType="void" visibility="protected">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAlimento" returnType="String" visibility="protected"/>
+        <Method name="setAlimento" returnType="void" visibility="protected">
+          <Argument type="String" name="alimento"/>
+        </Method>
+        <Method name="getEdad" returnType="Integer" visibility="protected"/>
+        <Method name="setEdad" returnType="void" visibility="protected">
+          <Argument type="Integer" name="edad"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="protected"/>
+        <Method name="setRaza" returnType="void" visibility="protected">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="Alimentarse" returnType="void" visibility="public"/>
+        <Method name="hacerRuido" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Caballo" package="herenciajavaguia09.Entities" visibility="public" xPosition="752.0" yPosition="207.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hacerRuido" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Electrodomestico" package="herenciajavaguia09.Entities" visibility="public" xPosition="620.0" yPosition="899.0">
+      <Fields>
+        <Field name="precio" type="Float" visibility="protected"/>
+        <Field name="color" type="String" visibility="protected"/>
+        <Field name="eficienciaEnergetica" type="char" visibility="protected"/>
+        <Field name="peso" type="Float" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Float" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="eficienciaEnergetica"/>
+          <Argument type="Float" name="peso"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrecio" returnType="Float" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="Float" name="precio"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getEficienciaEnergetica" returnType="char" visibility="public"/>
+        <Method name="setEficienciaEnergetica" returnType="void" visibility="public">
+          <Argument type="char" name="eficienciaEnergetica"/>
+        </Method>
+        <Method name="getPeso" returnType="Float" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="Float" name="peso"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gato" package="herenciajavaguia09.Entities" visibility="public" xPosition="1355.0" yPosition="79.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hacerRuido" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lavadora" package="herenciajavaguia09.Entities" visibility="public" isFinal="true" xPosition="1035.0" yPosition="1435.0">
+      <Fields>
+        <Field name="carga" type="Float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Float" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="eficienciaEnergetica"/>
+          <Argument type="Float" name="peso"/>
+          <Argument type="Float" name="carga"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCarga" returnType="Float" visibility="public"/>
+        <Method name="setCarga" returnType="void" visibility="public">
+          <Argument type="Float" name="carga"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="herenciajavaguia09.Entities" visibility="public" isFinal="true" xPosition="1186.0" yPosition="576.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hacerRuido" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Televisor" package="herenciajavaguia09.Entities" visibility="public" isFinal="true" xPosition="157.0" yPosition="1435.0">
+      <Fields>
+        <Field name="sintonizadorTDT" type="boolean" visibility="private"/>
+        <Field name="tamanioPulgadas" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="sintonizadorTDT"/>
+          <Argument type="float" name="tamanioPulgadas"/>
+          <Argument type="Float" name="precio"/>
+          <Argument type="String" name="color"/>
+          <Argument type="char" name="eficienciaEnergetica"/>
+          <Argument type="Float" name="peso"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isSintonizadorTDT" returnType="boolean" visibility="public"/>
+        <Method name="setSintonizadorTDT" returnType="void" visibility="public">
+          <Argument type="boolean" name="sintonizadorTDT"/>
+        </Method>
+        <Method name="getTamanioPulgadas" returnType="float" visibility="public"/>
+        <Method name="setTamanioPulgadas" returnType="void" visibility="public">
+          <Argument type="float" name="tamanioPulgadas"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guia09Ej01Herencia" package="herenciajavaguia09" visibility="public" xPosition="52.0" yPosition="633.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Guia09Ej02Herencia" package="herenciajavaguia09" visibility="public" xPosition="287.0" yPosition="616.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Guia09Ej03Herencia" package="herenciajavaguia09" visibility="public" xPosition="1790.0" yPosition="136.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LavadoraService" package="herenciajavaguia09.Services" visibility="public" xPosition="1220.0" yPosition="1108.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaLavadora" returnType="Lavadora" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public">
+          <Argument type="Electrodomestico" name="artifact"/>
+          <Argument type="Float" name="cargaLavadora"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TelevisorService" package="herenciajavaguia09.Services" visibility="public" xPosition="84.0" yPosition="1108.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearTelevisor" returnType="Televisor" visibility="public"/>
+        <Method name="precioFinal" returnType="void" visibility="public">
+          <Argument type="Electrodomestico" name="artifact"/>
+          <Argument type="boolean" name="tdt"/>
+          <Argument type="float" name="tamanioPulgadas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ElectrodomesticoInterface" package="herenciajavaguia09.Interfaces" visibility="public" xPosition="620.0" yPosition="665.0">
+      <Methods>
+        <Method name="crearElectrodomestico" returnType="Electrodomestico" visibility="public"/>
+        <Method name="comprobarColor" returnType="boolean" visibility="public">
+          <Argument type="String" name="Color"/>
+        </Method>
+        <Method name="comprobarEficiencia" returnType="boolean" visibility="public">
+          <Argument type="char" name="eficiencia"/>
+        </Method>
+        <Method name="precioFinal" returnType="void" visibility="public">
+          <Argument type="Electrodomestico" name="artifact"/>
+        </Method>
+        <Method name="precioFinal" returnType="void" visibility="public">
+          <Argument type="Electrodomestico" name="artifact"/>
+          <Argument type="Float" name="cargaLavadora"/>
+        </Method>
+        <Method name="precioFinal" returnType="void" visibility="public">
+          <Argument type="Electrodomestico" name="artifact"/>
+          <Argument type="boolean" name="tdt"/>
+          <Argument type="float" name="tamanioPulgadas"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="RuidoAnimal" package="herenciajavaguia09.Interfaces" visibility="public" xPosition="1412.0" yPosition="366.0">
+      <Methods>
+        <Method name="hacerRuido" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Enum name="Dieta" package="herenciajavaguia09.Enum" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Literals/>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="herenciajavaguia09.Entities.Televisor" target="herenciajavaguia09.Entities.Electrodomestico"/>
+    <UseRelation source="herenciajavaguia09.Services.LavadoraService" target="herenciajavaguia09.Entities.Electrodomestico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="herenciajavaguia09.Entities.Lavadora" target="herenciajavaguia09.Entities.Electrodomestico"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="herenciajavaguia09.Entities.Perro" target="herenciajavaguia09.Interfaces.RuidoAnimal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="herenciajavaguia09.Entities.Caballo" target="herenciajavaguia09.Interfaces.RuidoAnimal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="herenciajavaguia09.Entities.Animal" target="herenciajavaguia09.Interfaces.RuidoAnimal"/>
+    <UseRelation source="herenciajavaguia09.Services.TelevisorService" target="herenciajavaguia09.Entities.Electrodomestico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="herenciajavaguia09.Entities.Caballo" target="herenciajavaguia09.Entities.Animal"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="herenciajavaguia09.Entities.Gato" target="herenciajavaguia09.Interfaces.RuidoAnimal"/>
+    <UseRelation source="herenciajavaguia09.Services.LavadoraService" target="herenciajavaguia09.Entities.Lavadora" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="herenciajavaguia09.Services.TelevisorService" target="herenciajavaguia09.Entities.Televisor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="herenciajavaguia09.Entities.Perro" target="herenciajavaguia09.Entities.Animal"/>
+    <UseRelation source="herenciajavaguia09.Interfaces.ElectrodomesticoInterface" target="herenciajavaguia09.Entities.Electrodomestico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="herenciajavaguia09.Entities.Gato" target="herenciajavaguia09.Entities.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

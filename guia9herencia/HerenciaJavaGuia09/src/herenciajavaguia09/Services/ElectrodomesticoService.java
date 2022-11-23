@@ -90,11 +90,6 @@ public class ElectrodomesticoService implements ElectrodomesticoInterface {
 
     }
 
-    @Override
-    public void menuCrearListaElectro() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     /**
      * Sobrecarga de precioFinal para usar con lavadora
      *

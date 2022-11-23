@@ -16,9 +16,8 @@ public interface ElectrodomesticoInterface {
 
     public void precioFinal(Electrodomestico artifact);
 
-    public void precioFinal(Electrodomestico artifact,Float cargaLavadora);
-    
-    public void precioFinal(Electrodomestico artifact,boolean tdt, float tamanioPulgadas);
-    
-    public void menuCrearListaElectro();
+    public void precioFinal(Electrodomestico artifact, Float cargaLavadora);
+
+    public void precioFinal(Electrodomestico artifact, boolean tdt, float tamanioPulgadas);
+
 }
