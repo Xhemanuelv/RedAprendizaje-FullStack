@@ -21,7 +21,7 @@ public class ExcepcionesJavaGuia10Ej04 {
          * puede convertirse a entero, arroja una NumberFormatException y
          * además, al dividir un número por cero surge una ArithmeticException.
          * Manipule todas las posibles excepciones utilizando bloques try/catch
-         * para las distintas excepciones InputMismatchException
+         * para las distintas excepciones
          */
 
         int uno = 0, dos;
