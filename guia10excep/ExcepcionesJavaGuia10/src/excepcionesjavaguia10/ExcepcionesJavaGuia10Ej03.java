@@ -25,24 +25,13 @@ public class ExcepcionesJavaGuia10Ej03 {
         try {
             dosNumeros.setNumeroUno(Integer.parseInt(numA));
             dosNumeros.setNumeroDos(Integer.parseInt(numB));
-
+            double dividiendo = (dosNumeros.getNumeroUno()) / (dosNumeros.getNumeroDos());
+            dosNumeros.setNumeroUnoDivididonumeroDos(dividiendo);
+            System.out.println(dividiendo);
         } catch (NumberFormatException e) {
             System.out.println("Error se a ingresado un valor inapropiado");
             System.out.println(e.getMessage());
 //            System.out.println(e.fillInStackTrace());
-        } catch (Exception e) {
-            System.out.println("Unexpected error");
-            System.out.println(e.fillInStackTrace());
-        }
-
-        
-     
-        
-        try {
-
-            double dividiendo = (dosNumeros.getNumeroUno()) / (dosNumeros.getNumeroDos());
-            dosNumeros.setNumeroUnoDivididonumeroDos(dividiendo);
-            System.out.println(dividiendo);
 
         } catch (ArithmeticException e) {
 
@@ -54,6 +43,7 @@ public class ExcepcionesJavaGuia10Ej03 {
 
             System.out.println("Que habeis hecho!!!");
         }
+
         System.out.println(dosNumeros);
 
     }

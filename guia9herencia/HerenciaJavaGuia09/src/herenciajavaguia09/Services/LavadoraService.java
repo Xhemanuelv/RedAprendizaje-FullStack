@@ -8,20 +8,21 @@ import herenciajavaguia09.Entities.Lavadora;
  * @author Xhemanuelv
  */
 public class LavadoraService extends ElectrodomesticoService {
-    
+
     public Lavadora creaLavadora() {
         Electrodomestico father = crearElectrodomestico();
         System.out.println("Ingrese carga maxima lavadora");
         Float cargaMaxima = leer.nextFloat();
         precioFinal(father, cargaMaxima);
-        
+
         return new Lavadora(father.getPrecio(), father.getColor(), father.getEficienciaEnergetica(), father.getPeso(), cargaMaxima);
     }
-    
+
     /**
      * Override precioFinal Lavadora
+     *
      * @param artifact
-     * @param cargaLavadora 
+     * @param cargaLavadora
      */
     @Override
     public void precioFinal(Electrodomestico artifact, Float cargaLavadora) {
@@ -30,5 +31,5 @@ public class LavadoraService extends ElectrodomesticoService {
             artifact.setPrecio(artifact.getPrecio() + 500);
         }
     }
-    
+
 }

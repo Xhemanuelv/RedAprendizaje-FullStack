@@ -78,13 +78,13 @@ public class ElectrodomesticoService implements ElectrodomesticoInterface {
                 artifact.setPrecio(artifact.getPrecio() + 100);
         }
 
-        if (artifact.getPeso() > 80) {
+        if (artifact.getPeso() >= 80) {
             artifact.setPrecio(artifact.getPrecio() + 1000);
-        } else if (artifact.getPeso() < 80 && artifact.getPeso() > 50) {
+        } else if (artifact.getPeso() < 80 && artifact.getPeso() >= 50) {
             artifact.setPrecio(artifact.getPrecio() + 800);
-        } else if (artifact.getPeso() < 50 && artifact.getPeso() > 20) {
+        } else if (artifact.getPeso() < 50 && artifact.getPeso() >= 20) {
             artifact.setPrecio(artifact.getPrecio() + 500);
-        } else if (artifact.getPeso() < 20 && artifact.getPeso() > 1) {
+        } else if (artifact.getPeso() < 20 && artifact.getPeso() >= 1) {
             artifact.setPrecio(artifact.getPrecio() + 100);
         }
 

@@ -15,20 +15,21 @@ public class TelevisorService extends ElectrodomesticoService {
         float screensize = leer.nextFloat();
         System.out.println("Tiene decodificador TDT? s/n");
         boolean tdtAbool = ('s' == leer.next().toLowerCase().charAt(0));
+        System.out.println(tdtAbool);
         precioFinal(father, tdtAbool, screensize);
         return new Televisor(tdtAbool, screensize, father.getPrecio(), father.getColor(), father.getEficienciaEnergetica(), father.getPeso());
     }
 
     /**
      * Override precioFinal Televisor
+     *
      * @param artifact
      * @param tdt
-     * @param tamanioPulgadas 
+     * @param tamanioPulgadas
      */
     @Override
     public void precioFinal(Electrodomestico artifact, boolean tdt, float tamanioPulgadas) {
         super.precioFinal(artifact, tdt, tamanioPulgadas);
-
         if (tdt) {
             artifact.setPrecio(artifact.getPrecio() + 500);
         }
@@ -36,6 +37,7 @@ public class TelevisorService extends ElectrodomesticoService {
         if (tamanioPulgadas > 40) {
             artifact.setPrecio((float) 1.3 * artifact.getPrecio());
         }
+
     }
 
 }
