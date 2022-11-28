@@ -1,6 +1,5 @@
 package excepcionesjavaguia10;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -57,8 +56,7 @@ public class ExcepcionesJavaGuia10Ej05 {
             } catch (Exception e) {
                 System.out.println("Ingreso invalido");
                 System.out.println(e.fillInStackTrace());
-//            } catch (Exception e) {
-//                System.out.println("Error");
+
             } finally {
                 contador++;
             }
