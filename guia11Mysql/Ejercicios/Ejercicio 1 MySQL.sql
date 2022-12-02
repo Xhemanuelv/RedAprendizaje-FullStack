@@ -1,15 +1,7 @@
-/*a) A continuación, realizar las siguientes consultas sobre la base de datos personal:
-22. Hallar el salario más alto, el más bajo y la diferencia entre ellos.
-23. Hallar el salario promedio por departamento.
-Consultas con Having
-24. Hallar los departamentos que tienen más de tres empleados. Mostrar el número de
-empleados de esos departamentos.
-25. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige.
-Solo los que tengan más de dos empleados (2 incluido).
-26. Hallar los departamentos que no tienen empleados
-Consulta con Subconsulta
-27. Mostrar la lista de los empleados cuyo salario es mayor o igual que el promedio de la
-empresa. Ordenarlo por departamento.
+/*
+
+a) A continuación, realizar las siguientes consultas sobre la base de datos personal:
+
 */
 /*1. Obtener los datos completos de los empleados.*/
 select * from personal.empleado;
@@ -78,3 +70,44 @@ where d.nombre_depto not in('Ventas','Investigación','Mantenimiento');
 select max(e.salario) as salario_más_alto from personal.empleado e;
 /*21. Mostrar el nombre del último empleado de la lista por orden alfabético.*/
 select e.nombre from personal.empleado e where e.nombre =(select e.nombre from personal.empleado e order by e.nombre desc limit 1);
+/*22. Hallar el salario más alto, el más bajo y la diferencia entre ellos.*/
+select  max(e.salario) as Mayor_salario,min(e.salario) as Menor_salario, (max(e.salario)-min(e.salario)) As diferencia_mayor_a_menor_salario from personal.empleado e;
+/*23. Hallar el salario promedio por departamento.*/
+select
+d.nombre_depto as Departamento,
+avg(e.salario) as Salario_promedio_departamento
+from personal.empleado e 
+inner join personal.departamento d on(e.id_depto = d.id_depto)
+group by d.nombre_depto
+order by avg(e.salario) desc;
+/*
+ Consultas con Having
+ 
+ */
+ /*24. Hallar los departamentos que tienen más de tres empleados. Mostrar el número de
+empleados de esos departamentos.*/
+select 
+d.nombre_depto as Departamento,
+count(*) as Nro_empleados 
+from personal.empleado e
+inner join personal.departamento d on (e.id_depto = d.id_depto)
+group by d.nombre_depto
+/*having count(*) > 3*/
+order by count(*) asc;
+/*25. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige.Solo los que tengan más de dos empleados (2 incluido).*/
+select e.cod_jefe,count(*) from personal.empleado e group by e.cod_jefe having count(*) >= 2; /* En que parte dice el nombre de jefe o relacion con otra tabla donde el codigo jefe corresponde a un nombre*/
+/*26. Hallar los departamentos que no tienen empleados*/
+select 
+d.nombre_depto as Departamento,
+count(*) as Nro_empleados 
+from personal.empleado e
+inner join personal.departamento d on (e.id_depto = d.id_depto)
+group by d.nombre_depto
+having count(*) <= 0
+order by count(*) asc;
+/*
+Consulta con Subconsulta
+
+*/
+/*27. Mostrar la lista de los empleados cuyo salario es mayor o igual que el promedio de la empresa. Ordenarlo por departamento.*/
+select * from personal.empleado e having e.salario >= (select avg(e.salario) from personal.empleado e) order by e.id_depto;
