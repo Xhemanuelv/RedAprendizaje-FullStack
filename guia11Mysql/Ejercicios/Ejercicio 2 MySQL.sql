@@ -159,13 +159,7 @@ left join tienda.producto p
 on (p.codigo_fabricante = f.codigo);
 /*2. Devuelve un listado donde sólo aparezcan aquellos fabricantes que no tienen ningún
 producto asociado.*/
-select f.nombre as Fabricante,
-p.nombre as Producto,
-p.precio as "Precio(USD)"
-from tienda.fabricante f 
-left join tienda.producto p 
-on (p.codigo_fabricante = f.codigo);
-select * 
+select *
 from tienda.fabricante f 
 left join tienda.producto p 
 on (p.codigo_fabricante = f.codigo)
@@ -176,3 +170,42 @@ Con operadores básicos de comparación
 */
 /*1. Devuelve todos los productos del fabricante Lenovo. (Sin utilizar INNER JOIN).*/
 select * from tienda.producto p where p.codigo_fabricante = (select f.codigo from tienda.fabricante f where f.nombre ='lenovo');
+/*2. Devuelve todos los datos de los productos que tienen el mismo precio que el producto
+más caro del fabricante Lenovo. (Sin utilizar INNER JOIN) Por que?.*/
+select * from tienda.producto p where p.precio >= (select max(p.precio) from tienda.producto p where p.codigo_fabricante = (select f.codigo from tienda.fabricante f where f.nombre ='lenovo'));
+/*3. Lista el nombre del producto más caro del fabricante Lenovo.*/
+select p.nombre as "El nombre del producto más caro del fabricante Lenovo" 
+from tienda.producto p where p.precio = (select max(p.precio) from tienda.producto p where p.codigo_fabricante = (select f.codigo from tienda.fabricante f where f.nombre ='lenovo'));
+/*4. Lista todos los productos del fabricante Asus que tienen un precio superior al precio
+medio de todos sus productos.*/
+select *
+from tienda.producto p 
+where p.precio > 
+(select avg(p.precio) from tienda.producto p where p.codigo_fabricante = (select f.codigo from tienda.fabricante f where f.nombre ='Asus')) 
+and p.codigo_fabricante = (select f.codigo from tienda.fabricante f where f.nombre ='Asus');
+/*
+
+Subconsultas con IN y NOT IN
+
+*/
+/*1. Devuelve los nombres de los fabricantes que tienen productos asociados. (Utilizando IN o
+NOT IN).*/
+select f.nombre from tienda.fabricante f where f.codigo in(select p.codigo_fabricante from tienda.producto p);
+/*2. Devuelve los nombres de los fabricantes que no tienen productos asociados. (Utilizando
+IN o NOT IN).*/
+select f.nombre from tienda.fabricante f where f.codigo not in(select p.codigo_fabricante from tienda.producto p);
+/*
+
+Subconsultas (En la cláusula HAVING)
+
+*/
+/*1. Devuelve un listado con todos los nombres de los fabricantes que tienen el mismo número
+de productos que el fabricante Lenovo.*/
+select * from tienda.fabricante f 
+where f.codigo  
+in(select p.codigo_fabricante 
+from tienda.producto p 
+group by p.codigo_fabricante 
+having count(*) = (select count(*) 
+from tienda.producto p 
+where p.codigo_fabricante = (select f.codigo from tienda.fabricante f where f.nombre ='Lenovo')));
