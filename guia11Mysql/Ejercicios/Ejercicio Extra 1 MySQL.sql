@@ -74,3 +74,5 @@ from nba.partido p
 inner join nba.equipo eq on( p.equipo_local = eq.nombre or p.equipo_visitante = eq.nombre)
 where eq.division = 'Atlantic'
 group by eq.nombre;
+/*17. Mostrar los puntos de cada equipo en los partidos, tanto de local como de visitante.*/
+select p.equipo_local,p.equipo_visitante,p.puntos_local,p.puntos_visitante from nba.partido p;
