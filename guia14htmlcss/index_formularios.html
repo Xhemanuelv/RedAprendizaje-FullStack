@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <section id="main-section">
+        <div id="formulario">
+            <form id="form-registro" class="form-registro" action="/controlador-registro" method="POST"  enctype="multipart/form-data">
+                <div>
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input class="input input-text"  type="text" name="nombre" placeholder="Nombre y Apellido" required>
+                </div>
+                <div>
+                    <label for="mail">Correo Electronico</label>
+                    <input name="mail" type="mail" placeholder="user@yourmail.com" required>
+                </div>
+                <div>
+                    <label for="number">Telefono</label>
+                    <input name="number" type="number" placeholder="28469137" required>
+                </div>
+                <div>
+                    <label for="contrasenia">Contraseña</label>
+                    <input name="contrasenia" type="password" placeholder="tu password" required>
+                </div>
+                <div>
+                    <label for="femenino">Femenino</label>
+                    <input name="femenino" type="radio" value="f"/>
+                    <label for="masculino">Masculino</label>
+                    <input name="masculino" type="radio" value="m"/>
+                    <label for="otro">Otro</label>
+                    <input name="otro" type="radio" value="o"/>
+                </div>
+                <div>
+                    <label for="femenino">Femenino</label>
+                    <input name="femenino" type="checkbox" value="f"/>
+                    <label for="masculino">Masculino</label>
+                    <input name="masculino" type="checkbox" value="m"/>
+                    <label for="otro">Otro</label>
+                    <input name="otro" type="checkbox" value="o"/>
+                </div>
+                <div>
+                    <label for="pais">Pais de origen</label>
+                    <select name="pais">
+                        <option value="arg">ARG</option>
+                        <option value="chi">CHI</option>
+                        <option value="bra">BRA</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date"></label>
+                    </input name="date" type="date" >
+                </div>
+                <div>
+                    <label for="image"></label>
+                    </input name="image" type="file" >
+                </div>
+                <button type="submit">Enviar info</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

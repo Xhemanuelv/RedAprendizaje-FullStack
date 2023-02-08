@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Library">
+  <ClassDiagramComponents>
+    <Class name="Author" package="library.Entities" visibility="public" xPosition="400.0" yPosition="423.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="id" type="Integer" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="entryStatus" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="boolean" name="entryStatus"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="isEntryStatus" returnType="boolean" visibility="public"/>
+        <Method name="setEntryStatus" returnType="void" visibility="public">
+          <Argument type="boolean" name="entryStatus"/>
+        </Method>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Book" package="library.Entities" visibility="public" xPosition="31.0" yPosition="62.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="isbn" type="Long" visibility="private"/>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="year" type="int" visibility="private"/>
+        <Field name="totalCopies" type="int" visibility="private"/>
+        <Field name="borrowedCopies" type="int" visibility="private"/>
+        <Field name="availableCopies" type="int" visibility="private"/>
+        <Field name="entryStatus" type="boolean" visibility="private"/>
+        <Field name="author" type="Author" visibility="private"/>
+        <Field name="editorial" type="Editorial" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Method>
+        <Method name="getIsbn" returnType="Long" visibility="public"/>
+        <Method name="setIsbn" returnType="void" visibility="public">
+          <Argument type="Long" name="isbn"/>
+        </Method>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getYear" returnType="int" visibility="public"/>
+        <Method name="setYear" returnType="void" visibility="public">
+          <Argument type="int" name="year"/>
+        </Method>
+        <Method name="getTotalCopies" returnType="int" visibility="public"/>
+        <Method name="setTotalCopies" returnType="void" visibility="public">
+          <Argument type="int" name="totalCopies"/>
+        </Method>
+        <Method name="getBorrowedCopies" returnType="int" visibility="public"/>
+        <Method name="setBorrowedCopies" returnType="void" visibility="public">
+          <Argument type="int" name="borrowedCopies"/>
+        </Method>
+        <Method name="getAvailableCopies" returnType="int" visibility="public"/>
+        <Method name="setAvailableCopies" returnType="void" visibility="public">
+          <Argument type="int" name="availableCopies"/>
+        </Method>
+        <Method name="isEntryStatus" returnType="boolean" visibility="public"/>
+        <Method name="setEntryStatus" returnType="void" visibility="public">
+          <Argument type="boolean" name="entryStatus"/>
+        </Method>
+        <Method name="getAuthor" returnType="Author" visibility="public"/>
+        <Method name="setAuthor" returnType="void" visibility="public">
+          <Argument type="Author" name="author"/>
+        </Method>
+        <Method name="getEditorial" returnType="Editorial" visibility="public"/>
+        <Method name="setEditorial" returnType="void" visibility="public">
+          <Argument type="Editorial" name="editorial"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Editorial" package="library.Entities" visibility="public" xPosition="390.0" yPosition="62.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="id" type="Integer" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="entryStatus" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="boolean" name="entryStatus"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="isEntryStatus" returnType="boolean" visibility="public"/>
+        <Method name="setEntryStatus" returnType="void" visibility="public">
+          <Argument type="boolean" name="entryStatus"/>
+        </Method>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Library" package="library" visibility="public" xPosition="707.0" yPosition="62.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="library.Entities.Book" target="library.Entities.Author" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="editorial" source="library.Entities.Book" target="library.Entities.Editorial" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="author" source="library.Entities.Book" target="library.Entities.Author" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="library.Entities.Book" target="library.Entities.Editorial" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
